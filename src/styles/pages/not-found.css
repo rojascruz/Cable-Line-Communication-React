@@ -1,0 +1,321 @@
+/* =========================================================
+   NOT FOUND PAGE
+   ========================================================= */
+
+.not-found-page {
+    position: relative;
+
+    min-height:
+        calc(
+            100vh - 90px
+        );
+
+    display: grid;
+    place-items: center;
+
+    overflow: hidden;
+
+    padding:
+        100px
+        24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #061322 0%,
+            #091d35 50%,
+            #0d2d50 100%
+        );
+}
+
+
+/* =========================================================
+   GLOWS
+   ========================================================= */
+
+.not-found-glow {
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.not-found-glow-one {
+    top: -250px;
+    right: -180px;
+
+    width: 600px;
+    height: 600px;
+
+    background:
+        rgba(37, 99, 235, 0.15);
+
+    filter: blur(90px);
+}
+
+.not-found-glow-two {
+    left: -230px;
+    bottom: -270px;
+
+    width: 550px;
+    height: 550px;
+
+    background:
+        rgba(49, 200, 255, 0.09);
+
+    filter: blur(110px);
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.not-found-container {
+    position: relative;
+
+    z-index: 2;
+
+    width:
+        min(
+            100%,
+            820px
+        );
+
+    margin-inline: auto;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   NUMBER
+   ========================================================= */
+
+.not-found-code {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    z-index: -1;
+
+    transform:
+        translate(-50%, -54%);
+
+    color:
+        rgba(255, 255, 255, 0.025);
+
+    font-size:
+        clamp(
+            12rem,
+            28vw,
+            24rem
+        );
+
+    font-weight: 900;
+
+    line-height: 1;
+
+    letter-spacing: -0.08em;
+
+    user-select: none;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.not-found-eyebrow {
+    display: inline-flex;
+
+    margin-bottom: 22px;
+
+    padding:
+        9px
+        14px;
+
+    border:
+        1px solid
+        rgba(49, 200, 255, 0.16);
+
+    border-radius: 999px;
+
+    color: #31c8ff;
+
+    background:
+        rgba(49, 200, 255, 0.07);
+
+    font-size: 0.7rem;
+    font-weight: 800;
+
+    letter-spacing: 0.09em;
+
+    text-transform: uppercase;
+}
+
+.not-found-title {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size:
+        clamp(
+            3rem,
+            7vw,
+            6.4rem
+        );
+
+    font-weight: 850;
+
+    line-height: 0.96;
+
+    letter-spacing: -0.055em;
+
+    text-wrap: balance;
+}
+
+.not-found-title span {
+    background:
+        linear-gradient(
+            120deg,
+            #4b8dff,
+            #31c8ff
+        );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+
+    -webkit-text-fill-color: transparent;
+}
+
+.not-found-description {
+    max-width: 590px;
+
+    margin:
+        28px
+        auto
+        0;
+
+    color:
+        rgba(226, 239, 252, 0.63);
+
+    font-size: 0.96rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+.not-found-button {
+    min-height: 52px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 34px;
+
+    padding:
+        0
+        22px;
+
+    border-radius: 14px;
+
+    color: #071426;
+
+    background: #ffffff;
+
+    font-size: 0.8rem;
+    font-weight: 800;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 18px 40px
+        rgba(0, 0, 0, 0.16);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.not-found-button svg {
+    width: 18px;
+    height: 18px;
+
+    transition:
+        transform 0.25s ease;
+}
+
+.not-found-button:hover {
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 24px 48px
+        rgba(0, 0, 0, 0.22);
+}
+
+.not-found-button:hover svg {
+    transform:
+        translateX(-3px);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+    .not-found-page {
+        min-height:
+            calc(
+                100vh - 75px
+            );
+
+        padding:
+            80px
+            20px;
+    }
+
+    .not-found-description {
+        font-size: 0.88rem;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+.not-found-button:focus-visible {
+    outline:
+        3px solid
+        rgba(49, 200, 255, 0.42);
+
+    outline-offset: 4px;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .not-found-button,
+    .not-found-button svg {
+        transition: none;
+    }
+}

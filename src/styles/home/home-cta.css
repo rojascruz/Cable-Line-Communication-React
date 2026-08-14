@@ -1,0 +1,379 @@
+/* =========================================================
+   HOME CTA
+   ========================================================= */
+
+.home-cta-section {
+    position: relative;
+
+    padding:
+        clamp(80px, 8vw, 120px)
+        0;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0b1f3a 0%,
+            #102b52 50%,
+            #123863 100%
+        );
+}
+
+.home-cta-container {
+    position: relative;
+
+    width:
+        min(
+            calc(100% - 48px),
+            1280px
+        );
+
+    min-height: 430px;
+
+    margin-inline: auto;
+
+    padding:
+        clamp(45px, 7vw, 80px);
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    border-radius: 32px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.06),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    box-shadow:
+        0 30px 80px
+        rgba(0, 0, 0, 0.18);
+}
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.home-cta-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 710px;
+}
+
+.home-cta-eyebrow {
+    display: inline-flex;
+
+    margin-bottom: 20px;
+
+    padding:
+        9px
+        14px;
+
+    border:
+        1px solid
+        rgba(49, 200, 255, 0.15);
+
+    border-radius: 999px;
+
+    color: #31c8ff;
+
+    background:
+        rgba(49, 200, 255, 0.07);
+
+    font-size: 0.72rem;
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+}
+
+.home-cta-title {
+    max-width: 720px;
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size:
+        clamp(
+            2.7rem,
+            5vw,
+            5.2rem
+        );
+
+    font-weight: 850;
+
+    line-height: 0.98;
+
+    letter-spacing: -0.05em;
+
+    text-wrap: balance;
+}
+
+.home-cta-title span {
+    background:
+        linear-gradient(
+            120deg,
+            #4b8dff,
+            #31c8ff
+        );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.home-cta-description {
+    max-width: 620px;
+
+    margin:
+        24px
+        0
+        0;
+
+    color:
+        rgba(226, 239, 252, 0.65);
+
+    font-size: 1rem;
+
+    line-height: 1.75;
+}
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.home-cta-actions {
+    display: flex;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 14px;
+
+    margin-top: 32px;
+}
+
+.home-cta-primary,
+.home-cta-secondary {
+    min-height: 50px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding:
+        0
+        21px;
+
+    border-radius: 14px;
+
+    font-size: 0.82rem;
+    font-weight: 800;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.home-cta-primary {
+    color: #071426;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 14px 35px
+        rgba(0, 0, 0, 0.15);
+}
+
+.home-cta-primary svg {
+    width: 18px;
+    height: 18px;
+}
+
+.home-cta-primary:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 18px 42px
+        rgba(0, 0, 0, 0.2);
+}
+
+.home-cta-secondary {
+    color: #ffffff;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.14);
+
+    background:
+        rgba(255, 255, 255, 0.04);
+}
+
+.home-cta-secondary:hover {
+    transform: translateY(-2px);
+
+    border-color:
+        rgba(49, 200, 255, 0.32);
+
+    background:
+        rgba(49, 200, 255, 0.08);
+}
+
+/* =========================================================
+   DECORATION
+   ========================================================= */
+
+.home-cta-decoration {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 45%;
+    height: 100%;
+
+    pointer-events: none;
+}
+
+.home-cta-circle {
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(4px);
+}
+
+.home-cta-circle-one {
+    top: -110px;
+    right: -80px;
+
+    width: 330px;
+    height: 330px;
+
+    background:
+        rgba(37, 99, 235, 0.14);
+}
+
+.home-cta-circle-two {
+    right: 140px;
+    bottom: -130px;
+
+    width: 280px;
+    height: 280px;
+
+    background:
+        rgba(49, 200, 255, 0.08);
+}
+
+.home-cta-network {
+    position: absolute;
+
+    top: 45px;
+    right: 10px;
+
+    width: 390px;
+
+    color:
+        rgba(49, 200, 255, 0.22);
+}
+
+.home-cta-network circle {
+    fill: #31c8ff;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 950px) {
+
+    .home-cta-container {
+        width:
+            min(
+                calc(100% - 40px),
+                760px
+            );
+
+        min-height: 400px;
+    }
+
+    .home-cta-decoration {
+        width: 55%;
+        opacity: 0.55;
+    }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+    .home-cta-section {
+        padding:
+            65px
+            0;
+    }
+
+    .home-cta-container {
+        width:
+            calc(100% - 30px);
+
+        min-height: auto;
+
+        padding:
+            42px
+            24px;
+
+        border-radius: 24px;
+    }
+
+    .home-cta-decoration {
+        width: 100%;
+
+        opacity: 0.28;
+    }
+
+    .home-cta-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .home-cta-primary,
+    .home-cta-secondary {
+        width: 100%;
+    }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .home-cta-primary,
+    .home-cta-secondary {
+        transition: none;
+    }
+}
