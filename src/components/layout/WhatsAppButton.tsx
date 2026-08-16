@@ -1,11 +1,12 @@
 import { siteConfig } from '../../config/siteConfig'
+import { useLanguage } from '../../hooks/useLanguage'
 
 function WhatsAppButton() {
+  const { t } = useLanguage()
+
   const whatsappUrl =
     `https://wa.me/${siteConfig.whatsapp.number}` +
-    `?text=${encodeURIComponent(
-      siteConfig.whatsapp.message,
-    )}`
+    `?text=${encodeURIComponent(t.whatsapp.message)}`
 
   return (
     <a
@@ -13,7 +14,7 @@ function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       className="whatsapp-floating-button"
-      aria-label={`Contact ${siteConfig.businessName} on WhatsApp`}
+      aria-label="Contact Cable Line Communication on WhatsApp"
     >
       <svg
         viewBox="0 0 24 24"
