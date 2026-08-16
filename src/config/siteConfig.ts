@@ -10,8 +10,6 @@ export const siteConfig = {
 
   whatsapp: {
     number: '12675885005',
-    message:
-      'Hola, me gustaría recibir más información sobre sus servicios.',
   },
 
   businessHours: {

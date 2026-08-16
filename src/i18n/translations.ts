@@ -22,6 +22,10 @@ export const translations = {
       english: 'English',
       spanish: 'Español',
     },
+    whatsapp: {
+      message:
+        'Hello, I would like to receive more information about your services.',
+    },
 
     home: {
       hero: {
@@ -513,7 +517,11 @@ export const translations = {
       english: 'English',
       spanish: 'Español',
     },
-
+    
+    whatsapp: {
+      message:
+        'Hola, me gustaría recibir más información sobre sus servicios.',
+    },
     home: {
       hero: {
         badge: 'Telecomunicaciones e infraestructura',

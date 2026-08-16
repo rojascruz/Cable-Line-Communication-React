@@ -11,5 +11,5 @@ export default defineConfig({
     }),
   ],
 
-  base: '/Cable-Line-Communication-React/',
+  base: '/',
 })
