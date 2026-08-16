@@ -197,7 +197,7 @@ function ContactPage() {
   const whatsappUrl =
     `https://wa.me/${siteConfig.whatsapp.number}` +
     `?text=${encodeURIComponent(
-      siteConfig.whatsapp.message,
+      t.whatsapp.message,
     )}`
 
   return (
