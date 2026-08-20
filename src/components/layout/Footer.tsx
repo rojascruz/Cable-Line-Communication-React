@@ -5,6 +5,8 @@ import { siteConfig } from '../../config/siteConfig'
 
 import logo from '../../assets/images/logo/CLC-Logo.png'
 
+import '../../styles/layout/footer.css'
+
 function Footer() {
   const { t } = useLanguage()
 
@@ -13,7 +15,9 @@ function Footer() {
 
       <div className="footer-container">
 
-        {/* BRAND */}
+        {/* =================================================
+            BRAND
+            ================================================= */}
         <div className="footer-brand">
 
           <NavLink
@@ -21,7 +25,6 @@ function Footer() {
             className="footer-brand-link"
             aria-label={siteConfig.businessName}
           >
-
             <img
               src={logo}
               alt=""
@@ -29,7 +32,6 @@ function Footer() {
             />
 
             <div className="footer-brand-text">
-
               <strong>
                 Cable Line
               </strong>
@@ -37,9 +39,7 @@ function Footer() {
               <span>
                 Communication
               </span>
-
             </div>
-
           </NavLink>
 
           <p className="footer-description">
@@ -48,8 +48,9 @@ function Footer() {
 
         </div>
 
-
-        {/* QUICK LINKS */}
+        {/* =================================================
+            QUICK LINKS
+            ================================================= */}
         <div className="footer-column">
 
           <h2>
@@ -60,7 +61,6 @@ function Footer() {
             className="footer-links"
             aria-label={t.footer.quickLinks}
           >
-
             <NavLink
               to={siteConfig.navigation.home}
             >
@@ -84,13 +84,13 @@ function Footer() {
             >
               {t.navigation.contact}
             </NavLink>
-
           </nav>
 
         </div>
 
-
-        {/* SERVICES */}
+        {/* =================================================
+            SERVICES
+            ================================================= */}
         <div className="footer-column">
 
           <h2>
@@ -133,8 +133,9 @@ function Footer() {
 
         </div>
 
-
-        {/* CONTACT */}
+        {/* =================================================
+            CONTACT
+            ================================================= */}
         <div className="footer-column">
 
           <h2>
@@ -147,59 +148,32 @@ function Footer() {
               href={`tel:${siteConfig.phone.href}`}
               className="footer-contact-item"
             >
-
-              <div className="footer-contact-icon">
-
-                <svg
-                  viewBox="0 0 24 24"
+              <span className="footer-contact-icon">
+                <i
+                  className="bi bi-telephone"
                   aria-hidden="true"
-                >
-                  <path
-                    d="M5 4h3l2 5-2 2a14 14 0 0 0 5 5l2-2 5 2v3a2 2 0 0 1-2 2C10 21 3 14 3 6a2 2 0 0 1 2-2Z"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-
-              </div>
+                />
+              </span>
 
               <span>
                 {siteConfig.phone.display}
               </span>
-
             </a>
-
 
             <a
               href={`mailto:${siteConfig.email}`}
               className="footer-contact-item"
             >
-
-              <div className="footer-contact-icon">
-
-                <svg
-                  viewBox="0 0 24 24"
+              <span className="footer-contact-icon">
+                <i
+                  className="bi bi-envelope"
                   aria-hidden="true"
-                >
-                  <path
-                    d="M4 6h16v12H4zM4 7l8 6 8-6"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-
-              </div>
+                />
+              </span>
 
               <span>
                 {siteConfig.email}
               </span>
-
             </a>
 
           </div>
@@ -208,8 +182,9 @@ function Footer() {
 
       </div>
 
-
-      {/* BOTTOM */}
+      {/* ===================================================
+          BOTTOM
+          =================================================== */}
       <div className="footer-bottom">
 
         <div className="footer-bottom-container">

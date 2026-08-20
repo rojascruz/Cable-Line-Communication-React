@@ -18,32 +18,56 @@ function ServicesPreview() {
       title: services.items.fiber.title,
       description: services.items.fiber.description,
       image: fiberImage,
-      className: 'service-card-fiber',
+      icon: 'bi-diagram-3',
+      tag: services.items.fiber.tag,
     },
     {
       title: services.items.aerial.title,
       description: services.items.aerial.description,
       image: aerialImage,
-      className: 'service-card-aerial',
+      icon: 'bi-broadcast-pin',
+      tag: services.items.aerial.tag,
     },
     {
       title: services.items.underground.title,
       description: services.items.underground.description,
       image: undergroundImage,
-      className: 'service-card-underground',
+      icon: 'bi-signpost-split',
+      tag: services.items.underground.tag,
     },
   ]
 
   return (
     <section className="services-preview-section">
-      <div className="services-preview-glow" aria-hidden="true" />
+
+      {/* ===================================================
+          BACKGROUND
+          =================================================== */}
+      <div
+        className="services-preview-glow services-preview-glow-one"
+        aria-hidden="true"
+      />
+
+      <div
+        className="services-preview-glow services-preview-glow-two"
+        aria-hidden="true"
+      />
 
       <div className="services-preview-container">
 
+        {/* =================================================
+            HEADER
+            ================================================= */}
         <div className="services-preview-header">
+
           <div className="services-preview-copy">
 
-            <span className="section-eyebrow">
+            <span className="section-eyebrow services-preview-eyebrow">
+              <i
+                className="bi bi-grid-1x2"
+                aria-hidden="true"
+              />
+
               {services.eyebrow}
             </span>
 
@@ -68,33 +92,37 @@ function ServicesPreview() {
               to="/services"
               className="services-view-all"
             >
-              <span>{services.viewAll}</span>
+              <span>
+                {services.viewAll}
+              </span>
 
-              <svg
-                viewBox="0 0 24 24"
+              <i
+                className="bi bi-arrow-right"
                 aria-hidden="true"
-              >
-                <path
-                  d="M5 12h14M13 6l6 6-6 6"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+              />
             </NavLink>
 
           </div>
+
         </div>
 
+        {/* =================================================
+            SERVICES
+            ================================================= */}
         <div className="services-preview-grid">
+
           {items.map((service) => (
-            <article
+            <NavLink
               key={service.title}
-              className={`service-preview-card ${service.className}`}
+              to="/services"
+              className="service-preview-card"
             >
+
+              {/* =============================================
+                  IMAGE
+                  ============================================= */}
               <div className="service-preview-image-wrapper">
+
                 <img
                   src={service.image}
                   alt={service.title}
@@ -107,47 +135,65 @@ function ServicesPreview() {
                   aria-hidden="true"
                 />
 
-              
+                <div className="service-preview-icon">
+                  <i
+                    className={`bi ${service.icon}`}
+                    aria-hidden="true"
+                  />
+                </div>
+
+                <div className="service-preview-tag">
+                  <span className="service-preview-tag-dot" />
+
+                  <span>
+                    {service.tag}
+                  </span>
+                </div>
+
               </div>
 
+              {/* =============================================
+                  CONTENT
+                  ============================================= */}
               <div className="service-preview-content">
 
                 <div className="service-preview-heading">
+
                   <h3>
                     {service.title}
                   </h3>
 
-                  <NavLink
-                    to="/services"
-                    className="service-preview-arrow"
-                    aria-label={service.title}
-                  >
-                    <svg
-                      viewBox="0 0 24 24"
+                  <span className="service-preview-arrow">
+                    <i
+                      className="bi bi-arrow-up-right"
                       aria-hidden="true"
-                    >
-                      <path
-                        d="M5 12h14M13 6l6 6-6 6"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </NavLink>
+                    />
+                  </span>
+
                 </div>
 
                 <p>
                   {service.description}
                 </p>
 
+                <span className="service-preview-link">
+                  {services.learnMore}
+
+                  <i
+                    className="bi bi-arrow-right"
+                    aria-hidden="true"
+                  />
+                </span>
+
               </div>
-            </article>
+
+            </NavLink>
           ))}
+
         </div>
 
       </div>
+
     </section>
   )
 }

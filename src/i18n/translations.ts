@@ -29,305 +29,377 @@ export const translations = {
 
     home: {
       hero: {
-        badge: 'Telecommunications & infrastructure',
+        badge: 'Telecommunications & Infrastructure',
 
-        title: 'We build connections',
-        titleHighlight: 'that power the future.',
+        title: 'Infrastructure built',
+        titleHighlight: 'to keep you connected.',
 
         description:
-          'Cable Line Communication delivers professional infrastructure, fiber optic, cabling, and telecommunications solutions focused on quality, safety, and reliability.',
+          'Cable Line Communication delivers professional telecommunications infrastructure solutions backed by experienced field operations, specialized equipment, and a commitment to safety, quality, and dependable execution.',
 
-        primaryButton: 'Request Service',
-        secondaryButton: 'View Services',
+        primaryButton: 'Request a Quote',
+        secondaryButton: 'Explore Services',
 
-        safeWork: 'Safe Work',
-        safeWorkDescription: 'Quality in every project',
+        safeWork: 'Safety First',
+        safeWorkDescription: 'Responsible field operations',
 
-        modernSolutions: 'Modern Solutions',
-        modernSolutionsDescription: 'Technology & infrastructure',
+        modernSolutions: 'Built for Performance',
+        modernSolutionsDescription: 'Modern infrastructure solutions',
 
-        professionalService: 'Professional Service',
-        reliableResults: 'Reliable results',
+        professionalService: 'Professional Execution',
+        reliableResults: 'Reliable results in the field',
 
-        readyToConnect: 'Ready to Connect',
-        contactUs: 'Contact our team',
+        readyToConnect: 'Planning a Project?',
+        contactUs: 'Connect with our team',
       },
 
       services: {
-        eyebrow: 'Our Services',
+        eyebrow: 'Core Capabilities',
 
-        title: 'Built for reliable',
-        titleHighlight: 'connections.',
+        title: 'Infrastructure solutions',
+        titleHighlight: 'built for performance.',
 
         description:
-          'From fiber optic installation to aerial and underground infrastructure, our team delivers dependable telecommunications solutions designed for performance and long-term reliability.',
+          'From fiber optic deployment to aerial and underground construction, our field capabilities support telecommunications infrastructure with a focus on safety, precision, and dependable execution.',
 
-        viewAll: 'View All Services',
+        viewAll: 'Explore All Services',
+        learnMore: 'View Capability',
 
         items: {
           fiber: {
-            title: 'Fiber Optic',
+            title: 'Fiber Optic Infrastructure',
+            tag: 'High-Performance Connectivity',
             description:
-              'Professional fiber optic installation and infrastructure solutions for high-performance connectivity.',
+              'Professional fiber optic deployment and infrastructure solutions designed to support reliable, high-performance telecommunications networks.',
           },
 
           aerial: {
-            title: 'Aerial Construction',
+            title: 'Aerial Infrastructure',
+            tag: 'Field Construction',
             description:
-              'Reliable aerial infrastructure and cable installation supported by experienced field crews and specialized equipment.',
+              'Aerial construction and cable deployment supported by experienced crews, specialized equipment, and safety-focused field operations.',
           },
 
           underground: {
-            title: 'Underground Construction',
+            title: 'Underground Infrastructure',
+            tag: 'Precision Installation',
             description:
-              'Underground telecommunications infrastructure built with precision, safety, and long-term durability in mind.',
+              'Underground telecommunications construction designed for precise installation, long-term durability, and dependable network performance.',
           },
         },
       },
+
       benefits: {
         eyebrow: 'Why Cable Line',
-        title: 'Infrastructure backed by',
-        titleHighlight: 'experience and trust.',
+
+        title: 'Built on the standards',
+        titleHighlight: 'every project deserves.',
 
         description:
-          'Every project is supported by experienced professionals, safe work practices, specialized equipment, and a commitment to dependable results.',
+          'Our work is guided by field experience, responsible safety practices, attention to quality, and a commitment to delivering dependable telecommunications infrastructure.',
 
         items: {
           experience: {
-            title: 'Experience',
+            title: 'Field Experience',
             description:
-              'Practical telecommunications and infrastructure knowledge built through real field work.',
+              'Practical telecommunications and infrastructure knowledge developed through hands-on field operations.',
           },
 
           safety: {
-            title: 'Safety',
+            title: 'Safety Focused',
             description:
-              'Safety-focused practices designed to protect our crews, clients, and every project environment.',
+              'Responsible work practices designed to protect our crews, clients, and every project environment.',
           },
 
           quality: {
-            title: 'Quality',
+            title: 'Quality Execution',
             description:
-              'Professional execution with attention to detail, durability, and reliable long-term performance.',
+              'Professional workmanship with attention to detail, durability, and dependable long-term performance.',
           },
 
           commitment: {
-            title: 'Commitment',
+            title: 'Project Commitment',
             description:
-              'Responsive service and accountability throughout every stage of the project.',
+              'Clear communication, accountability, and dependable support throughout every stage of the project.',
           },
         },
       },
 
 
       fleet: {
-        eyebrow: 'Our Equipment',
+        eyebrow: 'Field Capabilities',
 
-        title: 'Equipped to work',
-        titleHighlight: 'where the project needs us.',
+        title: 'Equipped for',
+        titleHighlight: 'real-world infrastructure.',
 
         description:
-          'Our field operations are supported by specialized vehicles and equipment prepared for aerial, underground, and fiber optic infrastructure projects.',
+          'Our field operations are supported by specialized vehicles and equipment prepared for aerial construction, underground infrastructure, fiber optic deployment, and demanding telecommunications projects.',
+
+        status: 'Field Ready',
 
         items: {
           aerial: {
-            title: 'Aerial Equipment',
+            title: 'Aerial Operations',
             description:
-              'Specialized equipment for aerial construction, cable installation, and telecommunications infrastructure.',
+              'Specialized vehicles and equipment supporting aerial construction, cable deployment, and telecommunications infrastructure.',
           },
 
           drilling: {
-            title: 'Drilling Equipment',
+            title: 'Underground & Drilling Operations',
             description:
-              'Professional machinery prepared for underground infrastructure and directional drilling projects.',
+              'Professional equipment prepared for underground infrastructure and directional drilling projects with precision and efficiency.',
           },
 
           fiber: {
-            title: 'Fiber Optic Operations',
+            title: 'Fiber Optic Field Operations',
             description:
-              'Vehicles and equipment that support fiber optic installation, maintenance, and field operations.',
+              'Vehicles and equipment supporting fiber optic installation, maintenance, testing, and field deployment.',
           },
         },
       },
 
         cta: {
-          eyebrow: 'Let’s Work Together',
+          eyebrow: 'Let’s Build What’s Next',
 
           title: 'Ready to move your',
           titleHighlight: 'project forward?',
 
           description:
-            'Tell us about your telecommunications or infrastructure project and our team will help you identify the right solution.',
+            'Tell us about your telecommunications or infrastructure needs and our team will help you identify the right approach for your project.',
 
           primaryButton: 'Request a Quote',
           secondaryButton: 'Explore Services',
+
+          trustSafety: 'Safety-focused field operations',
+          trustEquipment: 'Specialized equipment',
+          trustProfessional: 'Professional project support',
         },
+
     },
+
     servicesPage: {
-        hero: {
-            eyebrow: 'Telecommunications Services',
-            title: 'Infrastructure built',
-            titleHighlight: 'for every connection.',
-            description:
-            'Professional construction, installation, and maintenance solutions for telecommunications infrastructure, delivered with safety, precision, and reliability.',
-            primaryButton: 'Request a Quote',
-            secondaryButton: 'Explore Services',
+      hero: {
+        eyebrow: 'Telecommunications Infrastructure',
 
-            cardLabel: 'Built for the field',
-            cardTitle: 'Reliable infrastructure from the ground up.',
-            cardDescription:
-            'Experienced crews, specialized equipment, and a commitment to quality across every project.',
-            cardStatus: 'Ready for your next project',
+        title: 'Infrastructure built',
+        titleHighlight: 'for dependable connectivity.',
+
+        description:
+          'Cable Line Communication delivers professional construction, installation, fiber optic, drilling, and network support solutions with a focus on safety, precision, and reliable field execution.',
+
+        primaryButton: 'Request a Quote',
+        secondaryButton: 'Explore Services',
+
+        trustSafety: 'Safety-focused field operations',
+        trustEquipment: 'Specialized equipment',
+        trustExecution: 'Professional execution',
+
+        cardLabel: 'Field Capabilities',
+
+        cardTitle:
+          'Built to support demanding telecommunications projects.',
+
+        cardDescription:
+          'Experienced field operations, specialized equipment, and infrastructure solutions focused on dependable performance.',
+
+        cardStatus:
+          'Ready for your next project',
+      },
+
+      services: {
+        eyebrow: 'Our Capabilities',
+
+        title: 'Professional infrastructure',
+        titleHighlight: 'for every environment.',
+
+        description:
+          'Our capabilities cover underground and aerial construction, directional drilling, fiber optic deployment, splicing, testing, and telecommunications network maintenance.',
+
+        learnMore: 'Request Service',
+      },
+
+      items: {
+        underground: {
+          title: 'Underground Construction',
+          tag: 'Underground Infrastructure',
+
+          description:
+            'Installation of conduit and underground telecommunications infrastructure designed for precise execution, dependable performance, and long-term durability.',
         },
 
-        services: {
-            eyebrow: 'Our Services',
-            title: 'Professional solutions',
-            titleHighlight: 'for every environment.',
-            description:
-            'Our capabilities cover aerial, underground, fiber optic, drilling, splicing, testing, and maintenance projects.',
-            learnMore: 'Request Service',
+        aerial: {
+          title: 'Aerial Construction',
+          tag: 'Aerial Infrastructure',
+
+          description:
+            'Professional aerial cabling and infrastructure installation supported by experienced field crews and safety-focused operations.',
         },
+
+        drilling: {
+          title: 'Horizontal Directional Drilling',
+          tag: 'Precision Drilling',
+
+          description:
+            'Precision underground drilling for conduit and cable installation designed to minimize disruption while supporting efficient infrastructure deployment.',
+        },
+
+        fiber: {
+          title: 'Fiber Optic Installation',
+          tag: 'Fiber Deployment',
+
+          description:
+            'Professional fiber optic deployment and infrastructure installation designed to support reliable, high-performance telecommunications networks.',
+        },
+
+        splicing: {
+          title: 'Splicing & Testing',
+          tag: 'Network Performance',
+
+          description:
+            'Fiber optic splicing, connectivity testing, and verification focused on dependable performance and proper network operation.',
+        },
+
+        network: {
+          title: 'Network Maintenance',
+          tag: 'Ongoing Support',
+
+          description:
+            'Preventive and corrective telecommunications maintenance focused on network reliability, uptime, and long-term performance.',
+        },
+      },
+
+      sectors: {
+        eyebrow: 'Environments We Support',
+
+        title: 'Infrastructure solutions across',
+        titleHighlight: 'multiple sectors.',
+
+        description:
+          'Our telecommunications capabilities support residential, commercial, industrial, institutional, subdivision, and internet provider environments.',
 
         items: {
-            underground: {
-            title: 'Underground Construction',
-            description:
-                'Installation of underground conduits and telecommunications infrastructure designed for dependable long-term performance.',
-            },
-
-            aerial: {
-            title: 'Aerial Construction',
-            description:
-                'Professional aerial cabling and infrastructure installation on poles and structures with safety and efficiency at every stage.',
-            },
-
-            drilling: {
-            title: 'Horizontal Directional Drilling',
-            description:
-                'Precision underground drilling for conduit and cable installation while minimizing disruption to the surrounding surface.',
-            },
-
-            fiber: {
-            title: 'Fiber Optic Installation',
-            description:
-                'Professional fiber optic deployment for high-performance telecommunications networks and reliable connectivity.',
-            },
-
-            splicing: {
-            title: 'Splicing & Testing',
-            description:
-                'Fiber optic splicing, connectivity testing, and verification designed to support optimal network performance.',
-            },
-
-            network: {
-            title: 'Network Maintenance',
-            description:
-                'Preventive and corrective telecommunications maintenance focused on reliability, uptime, and long-term performance.',
-            },
+          residential: 'Residential',
+          commercial: 'Commercial',
+          industrial: 'Industrial',
+          subdivisions: 'Subdivisions',
+          institutions: 'Institutions',
+          providers: 'Internet Providers',
         },
+      },
 
-        sectors: {
-            eyebrow: 'Areas We Serve',
-            title: 'Full coverage across',
-            titleHighlight: 'multiple sectors.',
-            description:
-            'Our infrastructure solutions support residential, commercial, industrial, institutional, and telecommunications environments.',
+      cta: {
+        eyebrow: 'Start Your Next Project',
 
-            items: {
-            residential: 'Residential',
-            commercial: 'Commercial',
-            industrial: 'Industrial',
-            subdivisions: 'Subdivisions',
-            institutions: 'Institutions',
-            providers: 'Internet Providers',
-            },
-        },
+        title:
+          'Let’s build the infrastructure your project needs.',
 
-        cta: {
-            eyebrow: 'Ready to start your next project?',
-            title: 'Let’s build the connection your project needs.',
-            description:
-            'Tell us about your project and our team will help identify the telecommunications solution that best fits your needs.',
-            button: 'Request a Quote',
-        },
+        description:
+          'Tell us about your telecommunications project and our team will help identify the appropriate service and next steps.',
+
+        button: 'Request a Quote',
+      },
     },
 
     aboutPage: {
       hero: {
         eyebrow: 'About Cable Line',
-        title: 'Building infrastructure',
+
+        title: 'Infrastructure built',
         titleHighlight: 'with purpose.',
+
         description:
-          'Cable Line Communication provides professional telecommunications and infrastructure solutions supported by field experience, specialized equipment, and a commitment to dependable service.',
-        button: 'Contact Our Team',
+          'Cable Line Communication delivers telecommunications infrastructure solutions through experienced field operations, specialized equipment, responsible work practices, and a commitment to dependable execution.',
+
+        button: 'Start a Conversation',
+        servicesButton: 'Explore Services',
+
+        trustSafety: 'Safety-focused operations',
+        trustEquipment: 'Specialized field equipment',
+        trustInfrastructure: 'Telecommunications expertise',
       },
 
       story: {
         eyebrow: 'Who We Are',
+
         title: 'Built around',
-        titleHighlight: 'reliable connections.',
+        titleHighlight: 'reliable infrastructure.',
+
         paragraphOne:
-          'Cable Line Communication works across telecommunications and infrastructure projects with a focus on quality, safety, and reliable execution.',
+          'Cable Line Communication supports telecommunications and infrastructure projects with a practical approach centered on quality, safety, communication, and dependable field execution.',
+
         paragraphTwo:
-          'From aerial and underground construction to fiber optic installation and network support, our team approaches every project with professionalism and attention to detail.',
+          'From aerial and underground construction to fiber optic deployment and network support, our team approaches every project with professionalism, attention to detail, and a focus on long-term performance.',
+
         highlight:
-          'Our goal is simple: deliver dependable infrastructure and build lasting relationships through the quality of our work.',
+          'We believe strong infrastructure is built through responsible execution, dependable service, and relationships earned through the quality of our work.',
+
+        badgeTitle: 'Field Capabilities',
+        badgeDescription: 'Built for real-world operations',
       },
 
       purpose: {
         mission: {
+          label: 'Our Purpose',
           title: 'Our Mission',
+
           description:
-            'To provide dependable telecommunications infrastructure solutions through professional service, safe work practices, quality execution, and a strong commitment to every client.',
+            'To deliver dependable telecommunications infrastructure through professional service, responsible field operations, quality workmanship, and a strong commitment to every project.',
         },
 
         vision: {
+          label: 'Where We Are Going',
           title: 'Our Vision',
+
           description:
-            'To continue growing as a trusted telecommunications infrastructure company recognized for reliability, quality, and the ability to support the evolving connectivity needs of our clients.',
+            'To continue growing as a trusted telecommunications infrastructure company recognized for reliable execution, professional standards, and the ability to support evolving connectivity needs.',
         },
       },
 
       values: {
         eyebrow: 'Our Values',
-        title: 'What guides',
+
+        title: 'Standards that guide',
         titleHighlight: 'every project.',
+
         description:
-          'The way we work matters as much as the result. These principles guide our decisions, our field operations, and our relationships with clients.',
+          'Our values shape the way we operate in the field, communicate with clients, and approach every project from planning through execution.',
 
         items: {
           safety: {
             title: 'Safety',
             description:
-              'Responsible work practices designed to protect our crews, clients, and project environments.',
+              'Responsible work practices focused on protecting our crews, clients, and project environments.',
           },
 
           quality: {
             title: 'Quality',
             description:
-              'Attention to detail and professional execution focused on dependable long-term results.',
+              'Professional workmanship and attention to detail focused on dependable long-term performance.',
           },
 
           commitment: {
             title: 'Commitment',
             description:
-              'Accountability, communication, and dedication throughout every stage of the project.',
+              'Accountability, communication, and dependable support throughout every stage of the project.',
           },
 
           reliability: {
             title: 'Reliability',
             description:
-              'Consistent service and infrastructure solutions our clients can depend on.',
+              'Consistent service and infrastructure solutions designed to perform when our clients need them.',
           },
         },
       },
 
       cta: {
-        eyebrow: 'Let’s Work Together',
-        title: 'Have a telecommunications project in mind?',
+        eyebrow: 'Let’s Build What’s Next',
+
+        title:
+          'Have a telecommunications infrastructure project in mind?',
+
         description:
-          'Tell us what your project needs and our team will help you identify the right infrastructure solution.',
+          'Tell us about your project and our team will help you identify the appropriate infrastructure solution and next steps.',
+
         button: 'Request a Quote',
       },
     },
@@ -336,29 +408,48 @@ export const translations = {
       hero: {
         eyebrow: 'Contact Cable Line',
 
-        title: 'Let’s talk about',
-        titleHighlight: 'your next project.',
+        title: 'Let’s build',
+        titleHighlight: 'what comes next.',
 
         description:
-          'Tell us what your telecommunications or infrastructure project needs. Our team is ready to help you identify the right solution.',
+          'Whether you are planning a telecommunications infrastructure project or interested in joining our team, we want to hear from you.',
 
         directContact: 'Direct Contact',
 
         callUs: 'Call Us',
         emailUs: 'Email Us',
+
+        projectContact: 'Project & Service',
+        projectContactDescription:
+          'Tell us about your infrastructure needs',
+
+        employmentContact: 'Employment',
+        employmentContactDescription:
+          'Explore opportunities to join our team',
       },
 
       info: {
-        eyebrow: 'Get in Touch',
+        eyebrow: 'Connect With Us',
 
         title: 'Start with a',
         titleHighlight: 'simple conversation.',
 
         description:
-          'Whether you need aerial construction, underground infrastructure, fiber optic installation, drilling, or network support, tell us about your project and we’ll help you take the next step.',
+          'Whether you need telecommunications infrastructure services or are interested in working with Cable Line Communication, choose the option that best fits what you need.',
 
         phoneLabel: 'Phone',
         emailLabel: 'Email',
+      },
+
+      careers: {
+        eyebrow: 'Careers',
+
+        title: 'Interested in joining our team?',
+
+        description:
+          'Cable Line Communication is looking for motivated individuals interested in telecommunications, infrastructure, and field operations. Tell us about your experience and the type of work you are interested in.',
+
+        button: 'Employment Inquiry',
       },
 
       process: {
@@ -366,21 +457,21 @@ export const translations = {
 
         items: {
           details: {
-            title: 'Tell us about the project',
+            title: 'Share your information',
             description:
-              'Share the service you need and the basic details of your project.',
+              'Tell us about your project, service needs, or employment interest.',
           },
 
           review: {
-            title: 'We review your needs',
+            title: 'We review your inquiry',
             description:
-              'Our team evaluates the information and identifies the appropriate next step.',
+              'Our team reviews the information and identifies the appropriate next step.',
           },
 
           connect: {
             title: 'We connect with you',
             description:
-              'We’ll follow up to discuss the project, requirements, and available options.',
+              'If appropriate, our team will follow up to discuss your inquiry and available options.',
           },
         },
       },
@@ -391,7 +482,21 @@ export const translations = {
         title: 'Tell us what you need.',
 
         description:
-          'Provide a few details and we’ll have the information needed to better understand your project.',
+          'Provide a few details and our team will have the information needed to better understand your project.',
+
+        employmentEyebrow:
+          'Employment Inquiry',
+
+        employmentTitle:
+          'Interested in joining our team?',
+
+        employmentDescription:
+          'Tell us about yourself, your experience, skills, availability, and the type of work you are interested in.',
+
+        inquiry: {
+          project: 'Project / Service',
+          employment: 'Employment',
+        },
 
         fields: {
           name: 'Full Name',
@@ -399,41 +504,70 @@ export const translations = {
           phone: 'Phone Number',
           service: 'Service Needed',
           message: 'Project Details',
+
+          employmentMessage:
+            'Experience & Employment Interest',
         },
 
         placeholders: {
           name: 'Your name',
+
           email: 'you@example.com',
+
           phone: '(000) 000-0000',
+
           service: 'Select a service',
+
           message:
             'Tell us about your project, location, service needed, or any important details...',
+
+          employmentMessage:
+            'Tell us about your experience, skills, previous work, availability, and the type of position you are interested in...',
         },
 
         services: {
-          underground: 'Underground Construction',
-          aerial: 'Aerial Construction',
-          drilling: 'Horizontal Directional Drilling',
-          fiber: 'Fiber Optic Installation',
-          splicing: 'Splicing & Testing',
-          maintenance: 'Network Maintenance',
-          other: 'Other / Not Sure',
+          underground:
+            'Underground Construction',
+
+          aerial:
+            'Aerial Construction',
+
+          drilling:
+            'Horizontal Directional Drilling',
+
+          fiber:
+            'Fiber Optic Installation',
+
+          splicing:
+            'Splicing & Testing',
+
+          maintenance:
+            'Network Maintenance',
+
+          other:
+            'Other / Not Sure',
         },
 
         privacy:
-          'Your information is only used to respond to your inquiry.',
+          'Your information is only used to review and respond to your inquiry.',
 
-        submit: 'Send Project Details',
+        submit:
+          'Send Project Details',
+
+        employmentSubmit:
+          'Send Employment Inquiry',
       },
 
       bottom: {
-        eyebrow: 'Not Sure What You Need?',
+        eyebrow: 'Not Sure Where to Start?',
 
-        title: 'That’s okay. Start by telling us about the project.',
+        title:
+          'Tell us what you need and we’ll point you in the right direction.',
 
         description:
-          'You don’t need to know the exact technical solution. Share what you’re trying to accomplish and our team can help identify the appropriate service.',
+          'You do not need to know the exact technical solution or position. Share your project needs or employment interests and our team can review the information.',
       },
+
       directActions: {
         whatsapp: {
           title: 'WhatsApp',
@@ -449,31 +583,46 @@ export const translations = {
       benefits: {
         items: {
           response: {
-            title: 'Fast Response',
+            title: 'Responsive Communication',
             description:
-              'We reply within 24 hours.',
+              'A direct way to connect with our team.',
           },
 
           personalized: {
-            title: 'Personalized Service',
+            title: 'Professional Support',
             description:
-              'We assess your needs and guide you to the best solution.',
+              'We review your inquiry and help identify the appropriate next step.',
           },
 
           tailored: {
-            title: 'Tailored Solutions',
+            title: 'Project Focused',
             description:
-              'Services adapted to your environment and project needs.',
+              'Infrastructure solutions aligned with the needs of each project.',
           },
 
           trust: {
-            title: 'Trust & Reliability',
+            title: 'Dependable Service',
             description:
-              'Professional service committed to your project.',
+              'Professional communication and commitment throughout the process.',
           },
         },
       },
-      
+    },
+
+    notFoundPage: {
+      eyebrow: 'Connection Not Found',
+
+      title: 'This destination',
+      titleHighlight: 'is currently unavailable.',
+
+      description:
+        'The page you are looking for may have been moved, renamed, or is no longer available. You can return home or continue exploring our telecommunications services.',
+
+      primaryButton: 'Back to Home',
+      secondaryButton: 'Explore Services',
+
+      helpText: 'Need help finding what you need?',
+      contactLink: 'Contact our team',
     },
 
     footer: {
@@ -524,309 +673,378 @@ export const translations = {
     },
     home: {
       hero: {
-        badge: 'Telecomunicaciones e infraestructura',
+        badge: 'Telecomunicaciones e Infraestructura',
 
-        title: 'Construimos conexiones',
-        titleHighlight: 'que impulsan el futuro.',
+        title: 'Infraestructura diseñada',
+        titleHighlight: 'para mantenerte conectado.',
 
         description:
-          'Cable Line Communication ofrece soluciones profesionales de infraestructura, fibra óptica, cableado y telecomunicaciones enfocadas en calidad, seguridad y confiabilidad.',
+          'Cable Line Communication desarrolla soluciones profesionales de infraestructura de telecomunicaciones respaldadas por experiencia en campo, equipo especializado y un firme compromiso con la seguridad, calidad y ejecución confiable.',
 
-        primaryButton: 'Solicitar servicio',
-        secondaryButton: 'Ver servicios',
+        primaryButton: 'Solicitar Cotización',
+        secondaryButton: 'Explorar Servicios',
 
-        safeWork: 'Trabajo seguro',
-        safeWorkDescription: 'Calidad en cada proyecto',
+        safeWork: 'Seguridad Primero',
+        safeWorkDescription: 'Operaciones responsables en campo',
 
-        modernSolutions: 'Soluciones modernas',
-        modernSolutionsDescription: 'Tecnología e infraestructura',
+        modernSolutions: 'Diseñado para Rendimiento',
+        modernSolutionsDescription: 'Soluciones modernas de infraestructura',
 
-        professionalService: 'Servicio profesional',
-        reliableResults: 'Resultados confiables',
+        professionalService: 'Ejecución Profesional',
+        reliableResults: 'Resultados confiables en campo',
 
-        readyToConnect: 'Listos para conectar',
-        contactUs: 'Comunícate con nuestro equipo',
+        readyToConnect: '¿Planificando un Proyecto?',
+        contactUs: 'Conecta con nuestro equipo',
       },
 
       services: {
-        eyebrow: 'Nuestros Servicios',
+        eyebrow: 'Capacidades Principales',
 
-        title: 'Construimos conexiones',
-        titleHighlight: 'confiables.',
+        title: 'Soluciones de infraestructura',
+        titleHighlight: 'diseñadas para rendir.',
 
         description:
-          'Desde instalaciones de fibra óptica hasta infraestructura aérea y subterránea, nuestro equipo ofrece soluciones de telecomunicaciones diseñadas para rendimiento y confiabilidad a largo plazo.',
+          'Desde el despliegue de fibra óptica hasta construcción aérea y subterránea, nuestras capacidades en campo respaldan proyectos de telecomunicaciones con enfoque en seguridad, precisión y ejecución confiable.',
 
-        viewAll: 'Ver Todos los Servicios',
+        viewAll: 'Explorar Todos los Servicios',
+        learnMore: 'Ver Capacidad',
 
         items: {
           fiber: {
-            title: 'Fibra Óptica',
+            title: 'Infraestructura de Fibra Óptica',
+            tag: 'Conectividad de Alto Rendimiento',
             description:
-              'Instalación profesional de fibra óptica y soluciones de infraestructura para conectividad de alto rendimiento.',
+              'Despliegue profesional de fibra óptica y soluciones de infraestructura diseñadas para redes de telecomunicaciones confiables y de alto rendimiento.',
           },
 
           aerial: {
-            title: 'Construcción Aérea',
+            title: 'Infraestructura Aérea',
+            tag: 'Construcción en Campo',
             description:
-              'Infraestructura aérea e instalación de cable respaldada por equipos especializados y personal con experiencia.',
+              'Construcción aérea e instalación de cableado respaldadas por personal con experiencia, equipo especializado y operaciones enfocadas en seguridad.',
           },
 
           underground: {
-            title: 'Construcción Subterránea',
+            title: 'Infraestructura Subterránea',
+            tag: 'Instalación de Precisión',
             description:
-              'Infraestructura subterránea de telecomunicaciones construida con precisión, seguridad y durabilidad.',
+              'Construcción subterránea de telecomunicaciones diseñada para instalación precisa, durabilidad y rendimiento confiable a largo plazo.',
           },
         },
       },
 
       benefits: {
         eyebrow: 'Por Qué Cable Line',
-        title: 'Infraestructura respaldada por',
-        titleHighlight: 'experiencia y confianza.',
+
+        title: 'Trabajamos bajo los estándares',
+        titleHighlight: 'que cada proyecto merece.',
 
         description:
-          'Cada proyecto cuenta con profesionales experimentados, prácticas de trabajo seguras, equipo especializado y un compromiso con resultados confiables.',
+          'Nuestro trabajo está respaldado por experiencia en campo, prácticas responsables de seguridad, atención a la calidad y un compromiso con infraestructura de telecomunicaciones confiable.',
 
         items: {
           experience: {
-            title: 'Experiencia',
+            title: 'Experiencia en Campo',
             description:
-              'Conocimiento práctico en telecomunicaciones e infraestructura desarrollado mediante trabajo real en campo.',
+              'Conocimiento práctico en telecomunicaciones e infraestructura desarrollado mediante operaciones reales en campo.',
           },
 
           safety: {
-            title: 'Seguridad',
+            title: 'Enfoque en Seguridad',
             description:
-              'Prácticas enfocadas en proteger a nuestro personal, clientes y cada entorno de trabajo.',
+              'Prácticas responsables diseñadas para proteger a nuestro personal, clientes y cada entorno de trabajo.',
           },
 
           quality: {
-            title: 'Calidad',
+            title: 'Ejecución de Calidad',
             description:
-              'Ejecución profesional con atención al detalle, durabilidad y rendimiento confiable a largo plazo.',
+              'Trabajo profesional con atención al detalle, durabilidad y rendimiento confiable a largo plazo.',
           },
 
           commitment: {
-            title: 'Compromiso',
+            title: 'Compromiso con el Proyecto',
             description:
-              'Servicio responsable y comunicación durante cada etapa del proyecto.',
+              'Comunicación clara, responsabilidad y apoyo confiable durante cada etapa del proyecto.',
           },
         },
       },
 
 
       fleet: {
-        eyebrow: 'Nuestro Equipo',
+        eyebrow: 'Capacidad Operacional',
 
-        title: 'Equipados para trabajar',
-        titleHighlight: 'donde el proyecto lo necesite.',
+        title: 'Equipados para',
+        titleHighlight: 'la infraestructura en campo.',
 
         description:
-          'Nuestras operaciones en campo cuentan con vehículos y equipos especializados para proyectos de infraestructura aérea, subterránea y fibra óptica.',
+          'Nuestras operaciones cuentan con vehículos y equipos especializados preparados para construcción aérea, infraestructura subterránea, despliegue de fibra óptica y proyectos exigentes de telecomunicaciones.',
+
+        status: 'Listos para el Campo',
 
         items: {
           aerial: {
-            title: 'Equipo Aéreo',
+            title: 'Operaciones Aéreas',
             description:
-              'Equipo especializado para construcción aérea, instalación de cableado e infraestructura de telecomunicaciones.',
+              'Vehículos y equipos especializados para construcción aérea, instalación de cableado e infraestructura de telecomunicaciones.',
           },
 
           drilling: {
-            title: 'Equipo de Perforación',
+            title: 'Operaciones Subterráneas y Perforación',
             description:
-              'Maquinaria profesional preparada para proyectos de infraestructura subterránea y perforación direccional.',
+              'Equipo profesional preparado para infraestructura subterránea y proyectos de perforación direccional con precisión y eficiencia.',
           },
 
           fiber: {
             title: 'Operaciones de Fibra Óptica',
             description:
-              'Vehículos y equipos que apoyan la instalación, mantenimiento y trabajo de campo de fibra óptica.',
+              'Vehículos y equipos que respaldan la instalación, mantenimiento, pruebas y despliegue de fibra óptica en campo.',
           },
         },
       },
 
       cta: {
-        eyebrow: 'Trabajemos Juntos',
+        eyebrow: 'Construyamos lo Próximo',
 
         title: '¿Listo para llevar tu',
-        titleHighlight: 'proyecto al próximo nivel?',
+        titleHighlight: 'proyecto hacia adelante?',
 
         description:
-          'Cuéntanos sobre tu proyecto de telecomunicaciones o infraestructura y nuestro equipo te ayudará a identificar la solución adecuada.',
+          'Cuéntanos sobre tus necesidades de telecomunicaciones o infraestructura y nuestro equipo te ayudará a identificar el enfoque adecuado para tu proyecto.',
 
         primaryButton: 'Solicitar Cotización',
         secondaryButton: 'Explorar Servicios',
+
+        trustSafety: 'Operaciones enfocadas en seguridad',
+        trustEquipment: 'Equipo especializado',
+        trustProfessional: 'Apoyo profesional para tu proyecto',
       },
 
 
     },
 
     servicesPage: {
-        hero: {
-            eyebrow: 'Servicios de Telecomunicaciones',
-            title: 'Infraestructura construida',
-            titleHighlight: 'para cada conexión.',
-            description:
-            'Soluciones profesionales de construcción, instalación y mantenimiento para infraestructura de telecomunicaciones, realizadas con seguridad, precisión y confiabilidad.',
-            primaryButton: 'Solicitar Cotización',
-            secondaryButton: 'Explorar Servicios',
+      hero: {
+        eyebrow: 'Infraestructura de Telecomunicaciones',
 
-            cardLabel: 'Preparados para el campo',
-            cardTitle: 'Infraestructura confiable desde la base.',
-            cardDescription:
-            'Personal con experiencia, equipo especializado y compromiso con la calidad en cada proyecto.',
-            cardStatus: 'Listos para tu próximo proyecto',
+        title: 'Infraestructura diseñada',
+        titleHighlight: 'para una conectividad confiable.',
+
+        description:
+          'Cable Line Communication ofrece soluciones profesionales de construcción, instalación, fibra óptica, perforación y apoyo de redes con enfoque en seguridad, precisión y ejecución confiable en campo.',
+
+        primaryButton: 'Solicitar Cotización',
+        secondaryButton: 'Explorar Servicios',
+
+        trustSafety: 'Operaciones enfocadas en seguridad',
+        trustEquipment: 'Equipo especializado',
+        trustExecution: 'Ejecución profesional',
+
+        cardLabel: 'Capacidad Operacional',
+
+        cardTitle:
+          'Preparados para respaldar proyectos exigentes de telecomunicaciones.',
+
+        cardDescription:
+          'Operaciones en campo, equipo especializado y soluciones de infraestructura enfocadas en rendimiento confiable.',
+
+        cardStatus:
+          'Listos para tu próximo proyecto',
+      },
+
+      services: {
+        eyebrow: 'Nuestras Capacidades',
+
+        title: 'Infraestructura profesional',
+        titleHighlight: 'para cada entorno.',
+
+        description:
+          'Nuestras capacidades incluyen construcción subterránea y aérea, perforación direccional, despliegue de fibra óptica, empalme, pruebas y mantenimiento de redes de telecomunicaciones.',
+
+        learnMore: 'Solicitar Servicio',
+      },
+
+      items: {
+        underground: {
+          title: 'Construcción Subterránea',
+          tag: 'Infraestructura Subterránea',
+
+          description:
+            'Instalación de conductos e infraestructura subterránea de telecomunicaciones diseñada para ejecución precisa, rendimiento confiable y durabilidad a largo plazo.',
         },
 
-        services: {
-            eyebrow: 'Nuestros Servicios',
-            title: 'Soluciones profesionales',
-            titleHighlight: 'para cada entorno.',
-            description:
-            'Nuestras capacidades incluyen proyectos aéreos, subterráneos, fibra óptica, perforación, empalme, pruebas y mantenimiento.',
-            learnMore: 'Solicitar Servicio',
+        aerial: {
+          title: 'Construcción Aérea',
+          tag: 'Infraestructura Aérea',
+
+          description:
+            'Instalación profesional de cableado e infraestructura aérea respaldada por personal con experiencia y operaciones enfocadas en seguridad.',
         },
+
+        drilling: {
+          title: 'Perforación Direccional Horizontal',
+          tag: 'Perforación de Precisión',
+
+          description:
+            'Perforación subterránea de precisión para instalación de conductos y cables, minimizando la alteración de la superficie y facilitando el despliegue de infraestructura.',
+        },
+
+        fiber: {
+          title: 'Instalación de Fibra Óptica',
+          tag: 'Despliegue de Fibra',
+
+          description:
+            'Instalación profesional de fibra óptica e infraestructura diseñada para respaldar redes de telecomunicaciones confiables y de alto rendimiento.',
+        },
+
+        splicing: {
+          title: 'Empalme y Pruebas',
+          tag: 'Rendimiento de Red',
+
+          description:
+            'Empalme de fibra óptica, pruebas de conectividad y verificación enfocadas en rendimiento confiable y operación adecuada de la red.',
+        },
+
+        network: {
+          title: 'Mantenimiento de Redes',
+          tag: 'Apoyo Continuo',
+
+          description:
+            'Mantenimiento preventivo y correctivo de telecomunicaciones enfocado en confiabilidad, disponibilidad y rendimiento de la red a largo plazo.',
+        },
+      },
+
+      sectors: {
+        eyebrow: 'Entornos que Atendemos',
+
+        title: 'Soluciones de infraestructura en',
+        titleHighlight: 'múltiples sectores.',
+
+        description:
+          'Nuestras capacidades de telecomunicaciones respaldan entornos residenciales, comerciales, industriales, institucionales, urbanizaciones y proveedores de internet.',
 
         items: {
-            underground: {
-            title: 'Construcción Subterránea',
-            description:
-                'Instalación de conductos e infraestructura subterránea de telecomunicaciones diseñada para un rendimiento confiable a largo plazo.',
-            },
-
-            aerial: {
-            title: 'Construcción Aérea',
-            description:
-                'Instalación profesional de cableado e infraestructura aérea en postes y estructuras con seguridad y eficiencia en cada etapa.',
-            },
-
-            drilling: {
-            title: 'Perforación Direccional Horizontal',
-            description:
-                'Perforación subterránea de precisión para instalación de conductos y cables minimizando la alteración de la superficie.',
-            },
-
-            fiber: {
-            title: 'Instalación de Fibra Óptica',
-            description:
-                'Implementación profesional de fibra óptica para redes de telecomunicaciones de alto rendimiento y conectividad confiable.',
-            },
-
-            splicing: {
-            title: 'Empalme y Pruebas',
-            description:
-                'Empalme de fibra óptica, pruebas de conectividad y verificación para garantizar un rendimiento óptimo de la red.',
-            },
-
-            network: {
-            title: 'Mantenimiento de Redes',
-            description:
-                'Mantenimiento preventivo y correctivo de telecomunicaciones enfocado en confiabilidad, disponibilidad y rendimiento.',
-            },
+          residential: 'Residencial',
+          commercial: 'Comercial',
+          industrial: 'Industrial',
+          subdivisions: 'Urbanizaciones',
+          institutions: 'Instituciones',
+          providers: 'Proveedores de Internet',
         },
+      },
 
-        sectors: {
-            eyebrow: 'Áreas que Atendemos',
-            title: 'Cobertura completa en',
-            titleHighlight: 'múltiples sectores.',
-            description:
-            'Nuestras soluciones de infraestructura atienden entornos residenciales, comerciales, industriales, institucionales y de telecomunicaciones.',
+      cta: {
+        eyebrow: 'Comienza tu Próximo Proyecto',
 
-            items: {
-            residential: 'Residencial',
-            commercial: 'Comercial',
-            industrial: 'Industrial',
-            subdivisions: 'Urbanizaciones',
-            institutions: 'Instituciones',
-            providers: 'Proveedores de Internet',
-            },
-        },
+        title:
+          'Construyamos la infraestructura que tu proyecto necesita.',
 
-        cta: {
-            eyebrow: '¿Listo para comenzar tu próximo proyecto?',
-            title: 'Construyamos la conexión que tu proyecto necesita.',
-            description:
-            'Cuéntanos sobre tu proyecto y nuestro equipo te ayudará a identificar la solución de telecomunicaciones que mejor se adapte a tus necesidades.',
-            button: 'Solicitar Cotización',
-        },
+        description:
+          'Cuéntanos sobre tu proyecto de telecomunicaciones y nuestro equipo te ayudará a identificar el servicio adecuado y los próximos pasos.',
+
+        button: 'Solicitar Cotización',
+      },
     },
 
     aboutPage: {
       hero: {
         eyebrow: 'Sobre Cable Line',
-        title: 'Construimos infraestructura',
+
+        title: 'Infraestructura construida',
         titleHighlight: 'con propósito.',
+
         description:
-          'Cable Line Communication ofrece soluciones profesionales de telecomunicaciones e infraestructura respaldadas por experiencia en campo, equipo especializado y un compromiso con un servicio confiable.',
-        button: 'Contactar Nuestro Equipo',
+          'Cable Line Communication desarrolla soluciones de infraestructura de telecomunicaciones mediante operaciones en campo, equipo especializado, prácticas responsables de trabajo y un firme compromiso con una ejecución confiable.',
+
+        button: 'Iniciar una Conversación',
+        servicesButton: 'Explorar Servicios',
+
+        trustSafety: 'Operaciones enfocadas en seguridad',
+        trustEquipment: 'Equipo especializado en campo',
+        trustInfrastructure: 'Experiencia en telecomunicaciones',
       },
 
       story: {
         eyebrow: 'Quiénes Somos',
+
         title: 'Construidos alrededor de',
-        titleHighlight: 'conexiones confiables.',
+        titleHighlight: 'infraestructura confiable.',
+
         paragraphOne:
-          'Cable Line Communication trabaja en proyectos de telecomunicaciones e infraestructura con un enfoque en calidad, seguridad y ejecución confiable.',
+          'Cable Line Communication participa en proyectos de telecomunicaciones e infraestructura con un enfoque práctico basado en calidad, seguridad, comunicación y ejecución confiable en campo.',
+
         paragraphTwo:
-          'Desde construcción aérea y subterránea hasta instalación de fibra óptica y apoyo de redes, nuestro equipo trabaja cada proyecto con profesionalismo y atención al detalle.',
+          'Desde construcción aérea y subterránea hasta despliegue de fibra óptica y apoyo de redes, nuestro equipo trabaja cada proyecto con profesionalismo, atención al detalle y enfoque en rendimiento a largo plazo.',
+
         highlight:
-          'Nuestro objetivo es sencillo: ofrecer infraestructura confiable y construir relaciones duraderas mediante la calidad de nuestro trabajo.',
+          'Creemos que una infraestructura sólida se construye mediante ejecución responsable, servicio confiable y relaciones ganadas a través de la calidad de nuestro trabajo.',
+
+        badgeTitle: 'Capacidad Operacional',
+        badgeDescription: 'Preparados para operaciones reales en campo',
       },
 
       purpose: {
         mission: {
+          label: 'Nuestro Propósito',
           title: 'Nuestra Misión',
+
           description:
-            'Proveer soluciones confiables de infraestructura de telecomunicaciones mediante servicio profesional, prácticas de trabajo seguras, ejecución de calidad y un firme compromiso con cada cliente.',
+            'Desarrollar infraestructura de telecomunicaciones confiable mediante servicio profesional, operaciones responsables en campo, trabajo de calidad y un firme compromiso con cada proyecto.',
         },
 
         vision: {
+          label: 'Hacia Dónde Vamos',
           title: 'Nuestra Visión',
+
           description:
-            'Continuar creciendo como una empresa de infraestructura de telecomunicaciones reconocida por su confiabilidad, calidad y capacidad para apoyar las necesidades cambiantes de conectividad de nuestros clientes.',
+            'Continuar creciendo como una empresa de infraestructura de telecomunicaciones reconocida por su ejecución confiable, estándares profesionales y capacidad para responder a las necesidades cambiantes de conectividad.',
         },
       },
 
       values: {
         eyebrow: 'Nuestros Valores',
-        title: 'Lo que guía',
+
+        title: 'Estándares que guían',
         titleHighlight: 'cada proyecto.',
+
         description:
-          'La manera en que trabajamos es tan importante como el resultado. Estos principios guían nuestras decisiones, operaciones y relaciones con nuestros clientes.',
+          'Nuestros valores definen cómo trabajamos en campo, cómo nos comunicamos con nuestros clientes y cómo abordamos cada proyecto desde la planificación hasta su ejecución.',
 
         items: {
           safety: {
             title: 'Seguridad',
             description:
-              'Prácticas responsables diseñadas para proteger a nuestro personal, clientes y ambientes de trabajo.',
+              'Prácticas responsables enfocadas en proteger a nuestro personal, clientes y ambientes de trabajo.',
           },
 
           quality: {
             title: 'Calidad',
             description:
-              'Atención al detalle y ejecución profesional enfocada en resultados confiables a largo plazo.',
+              'Trabajo profesional y atención al detalle enfocados en un rendimiento confiable a largo plazo.',
           },
 
           commitment: {
             title: 'Compromiso',
             description:
-              'Responsabilidad, comunicación y dedicación durante cada etapa del proyecto.',
+              'Responsabilidad, comunicación y apoyo confiable durante cada etapa del proyecto.',
           },
 
           reliability: {
             title: 'Confiabilidad',
             description:
-              'Servicio consistente y soluciones de infraestructura en las que nuestros clientes pueden confiar.',
+              'Servicio consistente y soluciones de infraestructura diseñadas para responder cuando nuestros clientes las necesitan.',
           },
         },
       },
 
       cta: {
-        eyebrow: 'Trabajemos Juntos',
-        title: '¿Tienes un proyecto de telecomunicaciones en mente?',
+        eyebrow: 'Construyamos lo Próximo',
+
+        title:
+          '¿Tienes un proyecto de infraestructura de telecomunicaciones en mente?',
+
         description:
-          'Cuéntanos qué necesita tu proyecto y nuestro equipo te ayudará a identificar la solución de infraestructura adecuada.',
+          'Cuéntanos sobre tu proyecto y nuestro equipo te ayudará a identificar la solución de infraestructura adecuada y los próximos pasos.',
+
         button: 'Solicitar Cotización',
       },
     },
@@ -835,29 +1053,54 @@ export const translations = {
       hero: {
         eyebrow: 'Contacta a Cable Line',
 
-        title: 'Hablemos sobre',
-        titleHighlight: 'tu próximo proyecto.',
+        title: 'Construyamos',
+        titleHighlight: 'lo que viene.',
 
         description:
-          'Cuéntanos qué necesita tu proyecto de telecomunicaciones o infraestructura. Nuestro equipo está listo para ayudarte a identificar la solución adecuada.',
+          'Ya sea que estés planificando un proyecto de infraestructura de telecomunicaciones o estés interesado en formar parte de nuestro equipo, queremos saber de ti.',
 
         directContact: 'Contacto Directo',
 
         callUs: 'Llámanos',
         emailUs: 'Escríbenos',
+
+        projectContact:
+          'Proyecto y Servicio',
+
+        projectContactDescription:
+          'Cuéntanos sobre tus necesidades de infraestructura',
+
+        employmentContact:
+          'Oportunidades de Empleo',
+
+        employmentContactDescription:
+          'Conoce cómo formar parte de nuestro equipo',
       },
 
       info: {
-        eyebrow: 'Comunícate con Nosotros',
+        eyebrow: 'Conecta con Nosotros',
 
         title: 'Comienza con una',
         titleHighlight: 'conversación sencilla.',
 
         description:
-          'Ya sea que necesites construcción aérea, infraestructura subterránea, instalación de fibra óptica, perforación o mantenimiento de redes, cuéntanos sobre tu proyecto y te ayudaremos con el próximo paso.',
+          'Ya sea que necesites servicios de infraestructura de telecomunicaciones o estés interesado en trabajar con Cable Line Communication, selecciona la opción que mejor se adapte a lo que buscas.',
 
         phoneLabel: 'Teléfono',
         emailLabel: 'Correo Electrónico',
+      },
+
+      careers: {
+        eyebrow: 'Empleo',
+
+        title:
+          '¿Interesado en formar parte de nuestro equipo?',
+
+        description:
+          'Cable Line Communication está buscando personas motivadas interesadas en telecomunicaciones, infraestructura y operaciones en campo. Cuéntanos sobre tu experiencia y el tipo de trabajo que te interesa.',
+
+        button:
+          'Consulta de Empleo',
       },
 
       process: {
@@ -865,114 +1108,209 @@ export const translations = {
 
         items: {
           details: {
-            title: 'Cuéntanos sobre el proyecto',
+            title:
+              'Comparte tu información',
+
             description:
-              'Indica el servicio que necesitas y los detalles principales de tu proyecto.',
+              'Cuéntanos sobre tu proyecto, necesidad de servicio o interés en oportunidades de empleo.',
           },
 
           review: {
-            title: 'Revisamos tus necesidades',
+            title:
+              'Revisamos tu consulta',
+
             description:
-              'Nuestro equipo evalúa la información e identifica el próximo paso apropiado.',
+              'Nuestro equipo revisa la información e identifica el próximo paso apropiado.',
           },
 
           connect: {
-            title: 'Nos comunicamos contigo',
+            title:
+              'Nos comunicamos contigo',
+
             description:
-              'Daremos seguimiento para conversar sobre el proyecto, requisitos y opciones disponibles.',
+              'De ser apropiado, nuestro equipo dará seguimiento para conversar sobre tu consulta y las opciones disponibles.',
           },
         },
       },
 
       form: {
-        eyebrow: 'Consulta de Proyecto',
+        eyebrow:
+          'Consulta de Proyecto',
 
-        title: 'Cuéntanos qué necesitas.',
+        title:
+          'Cuéntanos qué necesitas.',
 
         description:
-          'Proporciona algunos detalles y tendremos la información necesaria para entender mejor tu proyecto.',
+          'Proporciona algunos detalles y nuestro equipo tendrá la información necesaria para entender mejor tu proyecto.',
+
+        employmentEyebrow:
+          'Consulta de Empleo',
+
+        employmentTitle:
+          '¿Interesado en formar parte de nuestro equipo?',
+
+        employmentDescription:
+          'Cuéntanos sobre ti, tu experiencia, habilidades, disponibilidad y el tipo de trabajo que te interesa.',
+
+        inquiry: {
+          project:
+            'Proyecto / Servicio',
+
+          employment:
+            'Empleo',
+        },
 
         fields: {
-          name: 'Nombre Completo',
-          email: 'Correo Electrónico',
-          phone: 'Número de Teléfono',
-          service: 'Servicio Necesario',
-          message: 'Detalles del Proyecto',
+          name:
+            'Nombre Completo',
+
+          email:
+            'Correo Electrónico',
+
+          phone:
+            'Número de Teléfono',
+
+          service:
+            'Servicio Necesario',
+
+          message:
+            'Detalles del Proyecto',
+
+          employmentMessage:
+            'Experiencia e Interés Laboral',
         },
 
         placeholders: {
-          name: 'Tu nombre',
-          email: 'tu@correo.com',
-          phone: '(000) 000-0000',
-          service: 'Selecciona un servicio',
+          name:
+            'Tu nombre',
+
+          email:
+            'tu@correo.com',
+
+          phone:
+            '(000) 000-0000',
+
+          service:
+            'Selecciona un servicio',
+
           message:
             'Cuéntanos sobre tu proyecto, ubicación, servicio necesario o cualquier detalle importante...',
+
+          employmentMessage:
+            'Cuéntanos sobre tu experiencia, habilidades, trabajos anteriores, disponibilidad y el tipo de posición que te interesa...',
         },
 
         services: {
-          underground: 'Construcción Subterránea',
-          aerial: 'Construcción Aérea',
-          drilling: 'Perforación Direccional Horizontal',
-          fiber: 'Instalación de Fibra Óptica',
-          splicing: 'Empalme y Pruebas',
-          maintenance: 'Mantenimiento de Redes',
-          other: 'Otro / No Estoy Seguro',
+          underground:
+            'Construcción Subterránea',
+
+          aerial:
+            'Construcción Aérea',
+
+          drilling:
+            'Perforación Direccional Horizontal',
+
+          fiber:
+            'Instalación de Fibra Óptica',
+
+          splicing:
+            'Empalme y Pruebas',
+
+          maintenance:
+            'Mantenimiento de Redes',
+
+          other:
+            'Otro / No Estoy Seguro',
         },
 
         privacy:
-          'Tu información solamente se utilizará para responder a tu consulta.',
+          'Tu información solamente se utilizará para revisar y responder a tu consulta.',
 
-        submit: 'Enviar Detalles del Proyecto',
+        submit:
+          'Enviar Detalles del Proyecto',
+
+        employmentSubmit:
+          'Enviar Consulta de Empleo',
       },
 
       bottom: {
-        eyebrow: '¿No Estás Seguro de lo que Necesitas?',
+        eyebrow:
+          '¿No Sabes por Dónde Comenzar?',
 
-        title: 'No hay problema. Comienza contándonos sobre el proyecto.',
+        title:
+          'Cuéntanos qué necesitas y te orientaremos hacia el próximo paso.',
 
         description:
-          'No necesitas conocer la solución técnica exacta. Cuéntanos qué deseas lograr y nuestro equipo puede ayudarte a identificar el servicio apropiado.',
+          'No necesitas conocer la solución técnica exacta ni una posición específica. Comparte las necesidades de tu proyecto o tu interés laboral y nuestro equipo podrá revisar la información.',
       },
 
       directActions: {
         whatsapp: {
           title: 'WhatsApp',
-          description: 'Escríbenos directamente',
+          description:
+            'Escríbenos directamente',
         },
 
         email: {
-          title: 'Enviar un Correo',
-          description: 'Abrir tu aplicación de correo',
+          title:
+            'Enviar un Correo',
+
+          description:
+            'Abrir tu aplicación de correo',
         },
       },
 
       benefits: {
         items: {
           response: {
-            title: 'Respuesta Rápida',
+            title:
+              'Comunicación Ágil',
+
             description:
-              'Respondemos dentro de 24 horas.',
+              'Una forma directa de conectar con nuestro equipo.',
           },
 
           personalized: {
-            title: 'Servicio Personalizado',
+            title:
+              'Atención Profesional',
+
             description:
-              'Evaluamos tus necesidades y te orientamos hacia la mejor solución.',
+              'Revisamos tu consulta y ayudamos a identificar el próximo paso apropiado.',
           },
 
           tailored: {
-            title: 'Soluciones a tu Medida',
+            title:
+              'Enfoque en tu Proyecto',
+
             description:
-              'Servicios adaptados a tu entorno y a las necesidades del proyecto.',
+              'Soluciones de infraestructura alineadas con las necesidades de cada proyecto.',
           },
 
           trust: {
-            title: 'Confianza y Confiabilidad',
+            title:
+              'Servicio Confiable',
+
             description:
-              'Servicio profesional comprometido con tu proyecto.',
+              'Comunicación profesional y compromiso durante todo el proceso.',
           },
         },
       },
+    },
+
+    notFoundPage: {
+      eyebrow: 'Conexión No Encontrada',
+
+      title: 'Este destino',
+      titleHighlight: 'no está disponible.',
+
+      description:
+        'La página que estás buscando pudo haber sido movida, renombrada o ya no está disponible. Puedes regresar al inicio o continuar explorando nuestros servicios de telecomunicaciones.',
+
+      primaryButton: 'Volver al Inicio',
+      secondaryButton: 'Explorar Servicios',
+
+      helpText: '¿Necesitas ayuda para encontrar lo que buscas?',
+      contactLink: 'Contacta a nuestro equipo',
     },
 
     footer: {

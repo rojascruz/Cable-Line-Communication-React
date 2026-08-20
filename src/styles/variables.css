@@ -1,28 +1,90 @@
 :root {
+
+    /* =====================================================
+       BRAND COLORS
+       ===================================================== */
+
     --color-primary: #2563eb;
+    --color-primary-dark: #1d4ed8;
+
     --color-secondary: #00a6e8;
+    --color-secondary-light: #31c8ff;
+
+    --color-success: #16c784;
+
+    /* =====================================================
+       TYPOGRAPHY
+       ===================================================== */
 
     --color-text: #172033;
     --color-heading: #071426;
     --color-muted: #687b8d;
+    --color-muted-light: #7b8c9c;
+
+    /* =====================================================
+       BACKGROUNDS
+       ===================================================== */
 
     --color-background: #ffffff;
-    --color-background-soft: #f7fbff;
 
-    --color-success: #16c784;
+    --color-background-soft: #f7fbff;
+    --color-background-soft-alt: #f3f8fd;
+
+    --color-dark: #061321;
+    --color-dark-soft: #071a30;
+    --color-dark-blue: #0a2543;
+
+    /* =====================================================
+       BORDERS
+       ===================================================== */
+
+    --color-border:
+        rgba(17, 48, 78, 0.08);
+
+    --color-border-light:
+        rgba(255, 255, 255, 0.08);
+
+    /* =====================================================
+       CONTAINER
+       ===================================================== */
 
     --container-max-width: 1280px;
 
+    /* =====================================================
+       SHADOWS
+       ===================================================== */
+
     --shadow-soft:
-        0 14px 45px rgba(17, 48, 78, 0.08);
+        0 14px 45px
+        rgba(17, 48, 78, 0.08);
 
     --shadow-medium:
-        0 24px 60px rgba(17, 48, 78, 0.14);
+        0 24px 60px
+        rgba(17, 48, 78, 0.14);
+
+    --shadow-large:
+        0 30px 80px
+        rgba(17, 48, 78, 0.18);
+
+    --shadow-dark:
+        0 24px 60px
+        rgba(0, 0, 0, 0.22);
+
+    /* =====================================================
+       BORDER RADIUS
+       ===================================================== */
 
     --radius-small: 12px;
     --radius-medium: 18px;
     --radius-large: 28px;
 
-    --transition-fast: 0.2s ease;
-    --transition-normal: 0.3s ease;
+    /* =====================================================
+       TRANSITIONS
+       ===================================================== */
+
+    --transition-fast:
+        0.2s ease;
+
+    --transition-normal:
+        0.3s ease;
 }

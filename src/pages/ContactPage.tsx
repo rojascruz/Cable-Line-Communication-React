@@ -1,11 +1,19 @@
-import { useState, type FormEvent } from 'react'
+import {
+  useState,
+  type FormEvent,
+} from 'react'
 
 import { useLanguage } from '../hooks/useLanguage'
 import { siteConfig } from '../config/siteConfig'
 
 import '../styles/pages/contact.css'
 
+type InquiryType =
+  | 'project'
+  | 'employment'
+
 type ContactFormData = {
+  inquiryType: InquiryType
   name: string
   email: string
   phone: string
@@ -14,6 +22,7 @@ type ContactFormData = {
 }
 
 const initialFormData: ContactFormData = {
+  inquiryType: 'project',
   name: '',
   email: '',
   phone: '',
@@ -27,7 +36,12 @@ function ContactPage() {
   const page = t.contactPage
 
   const [formData, setFormData] =
-    useState<ContactFormData>(initialFormData)
+    useState<ContactFormData>(
+      initialFormData,
+    )
+
+  const isEmployment =
+    formData.inquiryType === 'employment'
 
   const serviceOptions = [
     page.form.services.underground,
@@ -41,116 +55,37 @@ function ContactPage() {
 
   const benefits = [
     {
-      title: page.benefits.items.response.title,
+      title:
+        page.benefits.items.response.title,
       description:
-        page.benefits.items.response.description,
-
-      icon: (
-        <path
-          d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.7"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      ),
+        page.benefits.items.response
+          .description,
+      icon: 'bi-lightning-charge',
     },
-
     {
       title:
-        page.benefits.items.personalized.title,
-
+        page.benefits.items.personalized
+          .title,
       description:
-        page.benefits.items.personalized.description,
-
-      icon: (
-        <>
-          <circle
-            cx="12"
-            cy="8"
-            r="3.5"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.7"
-          />
-
-          <path
-            d="M5 20c.5-4 3-6 7-6s6.5 2 7 6"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.7"
-            strokeLinecap="round"
-          />
-        </>
-      ),
+        page.benefits.items.personalized
+          .description,
+      icon: 'bi-person-check',
     },
-
     {
       title:
         page.benefits.items.tailored.title,
-
       description:
-        page.benefits.items.tailored.description,
-
-      icon: (
-        <>
-          <path
-            d="M4 7h10M18 7h2M4 17h2M10 17h10"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.7"
-            strokeLinecap="round"
-          />
-
-          <circle
-            cx="16"
-            cy="7"
-            r="2"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.7"
-          />
-
-          <circle
-            cx="8"
-            cy="17"
-            r="2"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.7"
-          />
-        </>
-      ),
+        page.benefits.items.tailored
+          .description,
+      icon: 'bi-sliders',
     },
-
     {
       title:
         page.benefits.items.trust.title,
-
       description:
-        page.benefits.items.trust.description,
-
-      icon: (
-        <>
-          <path
-            d="M12 3l7 3v5c0 4.5-2.9 8-7 10-4.1-2-7-5.5-7-10V6l7-3Z"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.7"
-            strokeLinejoin="round"
-          />
-
-          <path
-            d="m9 12 2 2 4-4"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.7"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </>
-      ),
+        page.benefits.items.trust
+          .description,
+      icon: 'bi-shield-check',
     },
   ]
 
@@ -164,31 +99,81 @@ function ContactPage() {
     }))
   }
 
+  const handleInquiryTypeChange = (
+    inquiryType: InquiryType,
+  ) => {
+    setFormData((current) => ({
+      ...current,
+      inquiryType,
+      service: '',
+      message: '',
+    }))
+  }
+
+  const scrollToForm = (
+    inquiryType: InquiryType,
+  ) => {
+    handleInquiryTypeChange(inquiryType)
+
+    window.setTimeout(() => {
+      document
+        .getElementById('contact-form-card')
+        ?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center',
+        })
+    }, 50)
+  }
+
   const handleSubmit = (
     event: FormEvent<HTMLFormElement>,
   ) => {
     event.preventDefault()
 
-    const subject =
-      `${siteConfig.businessName} - ${
-        formData.service || 'Service Request'
-      }`
+    const subject = isEmployment
+      ? `${siteConfig.businessName} - Employment Inquiry - ${formData.name}`
+      : `${siteConfig.businessName} - ${
+          formData.service ||
+          'Service Request'
+        }`
 
-    const body = [
-      `Name: ${formData.name}`,
-      `Email: ${formData.email}`,
-      `Phone: ${formData.phone || 'Not provided'}`,
-      `Service: ${
-        formData.service || 'Not specified'
-      }`,
-      '',
-      'Project details:',
-      formData.message,
-    ].join('\n')
+    const body = isEmployment
+      ? [
+          'EMPLOYMENT INQUIRY',
+          '',
+          `Name: ${formData.name}`,
+          `Email: ${formData.email}`,
+          `Phone: ${
+            formData.phone ||
+            'Not provided'
+          }`,
+          '',
+          'Experience / Employment Interest:',
+          formData.message,
+        ].join('\n')
+      : [
+          'PROJECT / SERVICE INQUIRY',
+          '',
+          `Name: ${formData.name}`,
+          `Email: ${formData.email}`,
+          `Phone: ${
+            formData.phone ||
+            'Not provided'
+          }`,
+          `Service: ${
+            formData.service ||
+            'Not specified'
+          }`,
+          '',
+          'Project Details:',
+          formData.message,
+        ].join('\n')
 
     const mailto =
       `mailto:${siteConfig.email}` +
-      `?subject=${encodeURIComponent(subject)}` +
+      `?subject=${encodeURIComponent(
+        subject,
+      )}` +
       `&body=${encodeURIComponent(body)}`
 
     window.location.href = mailto
@@ -198,35 +183,44 @@ function ContactPage() {
     `https://wa.me/${siteConfig.whatsapp.number}` +
     `?text=${encodeURIComponent(
       t.whatsapp.message,
-  )}`
+    )}`
 
   return (
     <main className="contact-page">
 
-      {/* HERO */}
+      {/* =====================================================
+          HERO
+          ===================================================== */}
       <section className="contact-hero">
 
         <div
-          className="
-            contact-hero-decoration
-            contact-hero-decoration-one
-          "
+          className="contact-hero-decoration contact-hero-decoration-one"
           aria-hidden="true"
         />
 
         <div
-          className="
-            contact-hero-decoration
-            contact-hero-decoration-two
-          "
+          className="contact-hero-decoration contact-hero-decoration-two"
+          aria-hidden="true"
+        />
+
+        <div
+          className="contact-hero-grid"
           aria-hidden="true"
         />
 
         <div className="contact-hero-container">
 
+          {/* =================================================
+              HERO COPY
+              ================================================= */}
           <div className="contact-hero-copy">
 
             <span className="contact-hero-eyebrow">
+              <i
+                className="bi bi-chat-dots"
+                aria-hidden="true"
+              />
+
               {page.hero.eyebrow}
             </span>
 
@@ -243,8 +237,63 @@ function ContactPage() {
               {page.hero.description}
             </p>
 
+            <div className="contact-hero-options">
+
+              <button
+                type="button"
+                onClick={() =>
+                  scrollToForm('project')
+                }
+              >
+                <span className="contact-hero-option-icon">
+                  <i
+                    className="bi bi-buildings"
+                    aria-hidden="true"
+                  />
+                </span>
+
+                <span>
+                  <strong>
+                    {page.hero.projectContact}
+                  </strong>
+
+                  <small>
+                    {page.hero.projectContactDescription}
+                  </small>
+                </span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() =>
+                  scrollToForm('employment')
+                }
+              >
+                <span className="contact-hero-option-icon">
+                  <i
+                    className="bi bi-person-workspace"
+                    aria-hidden="true"
+                  />
+                </span>
+
+                <span>
+                  <strong>
+                    {page.hero.employmentContact}
+                  </strong>
+
+                  <small>
+                    {page.hero.employmentContactDescription}
+                  </small>
+                </span>
+              </button>
+
+            </div>
+
           </div>
 
+          {/* =================================================
+              DIRECT CONTACT
+              ================================================= */}
           <div className="contact-hero-direct">
 
             <span className="contact-hero-direct-label">
@@ -256,19 +305,10 @@ function ContactPage() {
               className="contact-hero-direct-link"
             >
               <span className="contact-direct-icon">
-                <svg
-                  viewBox="0 0 24 24"
+                <i
+                  className="bi bi-telephone"
                   aria-hidden="true"
-                >
-                  <path
-                    d="M5 4h3l2 5-2 2a14 14 0 0 0 5 5l2-2 5 2v3a2 2 0 0 1-2 2C10 21 3 14 3 6a2 2 0 0 1 2-2Z"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+                />
               </span>
 
               <div>
@@ -280,6 +320,11 @@ function ContactPage() {
                   {siteConfig.phone.display}
                 </strong>
               </div>
+
+              <i
+                className="bi bi-arrow-up-right contact-direct-arrow"
+                aria-hidden="true"
+              />
             </a>
 
             <a
@@ -287,19 +332,10 @@ function ContactPage() {
               className="contact-hero-direct-link"
             >
               <span className="contact-direct-icon">
-                <svg
-                  viewBox="0 0 24 24"
+                <i
+                  className="bi bi-envelope"
                   aria-hidden="true"
-                >
-                  <path
-                    d="M4 6h16v12H4zM4 7l8 6 8-6"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+                />
               </span>
 
               <div>
@@ -311,6 +347,11 @@ function ContactPage() {
                   {siteConfig.email}
                 </strong>
               </div>
+
+              <i
+                className="bi bi-arrow-up-right contact-direct-arrow"
+                aria-hidden="true"
+              />
             </a>
 
           </div>
@@ -319,15 +360,24 @@ function ContactPage() {
 
       </section>
 
-
-      {/* MAIN CONTACT SECTION */}
+      {/* =====================================================
+          MAIN CONTACT
+          ===================================================== */}
       <section className="contact-main-section">
 
         <div className="contact-main-container">
 
+          {/* =================================================
+              LEFT INFORMATION
+              ================================================= */}
           <aside className="contact-info-panel">
 
             <span className="section-eyebrow">
+              <i
+                className="bi bi-chat-square-text"
+                aria-hidden="true"
+              />
+
               {page.info.eyebrow}
             </span>
 
@@ -344,41 +394,22 @@ function ContactPage() {
               {page.info.description}
             </p>
 
-
-            {/* DIRECT ACTIONS */}
+            {/* ===============================================
+                DIRECT ACTIONS
+                =============================================== */}
             <div className="contact-direct-actions">
 
               <a
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="
-                  contact-direct-action
-                  contact-direct-action-whatsapp
-                "
+                className="contact-direct-action contact-direct-action-whatsapp"
               >
-
                 <div className="contact-action-icon">
-
-                  <svg
-                    viewBox="0 0 24 24"
+                  <i
+                    className="bi bi-whatsapp"
                     aria-hidden="true"
-                  >
-                    <path
-                      d="M20.5 11.8a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.3-4.7A8.5 8.5 0 1 1 20.5 11.8Z"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.7"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-
-                    <path
-                      d="M8.5 8.4c.3-.5.5-.5.7-.5h.5c.2 0 .4.1.5.4l.8 1.7c.1.3.1.5-.1.7l-.6.7c-.2.2-.1.4 0 .6.6 1 1.5 1.9 2.5 2.5.2.1.4.2.6 0l.8-.8c.2-.2.4-.3.7-.1l1.7.8c.3.1.4.3.4.5 0 .4-.2 1.2-.8 1.7-.5.5-1.3.8-2.3.5-1.1-.3-2.6-1-4.1-2.3-1.3-1.1-2.1-2.6-2.5-3.7-.4-1-.1-2.1.4-2.7Z"
-                      fill="currentColor"
-                    />
-                  </svg>
-
+                  />
                 </div>
 
                 <div>
@@ -394,45 +425,21 @@ function ContactPage() {
                   </span>
                 </div>
 
-                <svg
-                  className="contact-action-arrow"
-                  viewBox="0 0 24 24"
+                <i
+                  className="bi bi-arrow-right contact-action-arrow"
                   aria-hidden="true"
-                >
-                  <path
-                    d="M5 12h14M13 6l6 6-6 6"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-
+                />
               </a>
-
 
               <a
                 href={`mailto:${siteConfig.email}`}
                 className="contact-direct-action"
               >
-
                 <div className="contact-action-icon">
-
-                  <svg
-                    viewBox="0 0 24 24"
+                  <i
+                    className="bi bi-envelope"
                     aria-hidden="true"
-                  >
-                    <path
-                      d="M4 6h16v12H4zM4 7l8 6 8-6"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.8"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-
+                  />
                 </div>
 
                 <div>
@@ -448,27 +455,64 @@ function ContactPage() {
                   </span>
                 </div>
 
-                <svg
-                  className="contact-action-arrow"
-                  viewBox="0 0 24 24"
+                <i
+                  className="bi bi-arrow-right contact-action-arrow"
                   aria-hidden="true"
-                >
-                  <path
-                    d="M5 12h14M13 6l6 6-6 6"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-
+                />
               </a>
 
             </div>
 
+            {/* ===============================================
+                CAREERS
+                =============================================== */}
+            <div className="contact-careers-card">
 
-            {/* PROCESS */}
+              <div className="contact-careers-icon">
+                <i
+                  className="bi bi-person-workspace"
+                  aria-hidden="true"
+                />
+              </div>
+
+              <div className="contact-careers-content">
+
+                <span className="contact-careers-eyebrow">
+                  {page.careers.eyebrow}
+                </span>
+
+                <h3>
+                  {page.careers.title}
+                </h3>
+
+                <p>
+                  {page.careers.description}
+                </p>
+
+                <button
+                  type="button"
+                  className="contact-careers-button"
+                  onClick={() =>
+                    scrollToForm('employment')
+                  }
+                >
+                  <span>
+                    {page.careers.button}
+                  </span>
+
+                  <i
+                    className="bi bi-arrow-right"
+                    aria-hidden="true"
+                  />
+                </button>
+
+              </div>
+
+            </div>
+
+            {/* ===============================================
+                PROCESS
+                =============================================== */}
             <div className="contact-process">
 
               <span className="contact-process-label">
@@ -476,7 +520,13 @@ function ContactPage() {
               </span>
 
               <div className="contact-process-item">
-                <span>01</span>
+
+                <span className="contact-process-icon">
+                  <i
+                    className="bi bi-chat-square-text"
+                    aria-hidden="true"
+                  />
+                </span>
 
                 <div>
                   <strong>
@@ -493,10 +543,17 @@ function ContactPage() {
                     }
                   </p>
                 </div>
+
               </div>
 
               <div className="contact-process-item">
-                <span>02</span>
+
+                <span className="contact-process-icon">
+                  <i
+                    className="bi bi-search"
+                    aria-hidden="true"
+                  />
+                </span>
 
                 <div>
                   <strong>
@@ -513,10 +570,17 @@ function ContactPage() {
                     }
                   </p>
                 </div>
+
               </div>
 
               <div className="contact-process-item">
-                <span>03</span>
+
+                <span className="contact-process-icon">
+                  <i
+                    className="bi bi-telephone-outbound"
+                    aria-hidden="true"
+                  />
+                </span>
 
                 <div>
                   <strong>
@@ -533,32 +597,113 @@ function ContactPage() {
                     }
                   </p>
                 </div>
+
               </div>
 
             </div>
 
           </aside>
 
-
-          {/* FORM */}
-          <div className="contact-form-card">
+          {/* =================================================
+              FORM
+              ================================================= */}
+          <div
+            id="contact-form-card"
+            className={`contact-form-card ${
+              isEmployment
+                ? 'is-employment'
+                : ''
+            }`}
+          >
 
             <div className="contact-form-header">
 
               <span>
-                {page.form.eyebrow}
+                <i
+                  className={
+                    isEmployment
+                      ? 'bi bi-person-badge'
+                      : 'bi bi-clipboard2-check'
+                  }
+                  aria-hidden="true"
+                />
+
+                {isEmployment
+                  ? page.form.employmentEyebrow
+                  : page.form.eyebrow}
               </span>
 
               <h2>
-                {page.form.title}
+                {isEmployment
+                  ? page.form.employmentTitle
+                  : page.form.title}
               </h2>
 
               <p>
-                {page.form.description}
+                {isEmployment
+                  ? page.form
+                      .employmentDescription
+                  : page.form.description}
               </p>
 
             </div>
 
+            {/* ===============================================
+                TYPE SELECTOR
+                =============================================== */}
+            <div className="contact-inquiry-selector">
+
+              <button
+                type="button"
+                className={
+                  !isEmployment
+                    ? 'is-active'
+                    : ''
+                }
+                onClick={() =>
+                  handleInquiryTypeChange(
+                    'project',
+                  )
+                }
+              >
+                <i
+                  className="bi bi-buildings"
+                  aria-hidden="true"
+                />
+
+                <span>
+                  {page.form.inquiry.project}
+                </span>
+              </button>
+
+              <button
+                type="button"
+                className={
+                  isEmployment
+                    ? 'is-active'
+                    : ''
+                }
+                onClick={() =>
+                  handleInquiryTypeChange(
+                    'employment',
+                  )
+                }
+              >
+                <i
+                  className="bi bi-person-workspace"
+                  aria-hidden="true"
+                />
+
+                <span>
+                  {page.form.inquiry.employment}
+                </span>
+              </button>
+
+            </div>
+
+            {/* ===============================================
+                FORM
+                =============================================== */}
             <form
               className="contact-form"
               onSubmit={handleSubmit}
@@ -570,6 +715,7 @@ function ContactPage() {
 
                   <label htmlFor="contact-name">
                     {page.form.fields.name}
+
                     <span aria-hidden="true">
                       *
                     </span>
@@ -594,11 +740,11 @@ function ContactPage() {
 
                 </div>
 
-
                 <div className="contact-field">
 
                   <label htmlFor="contact-email">
                     {page.form.fields.email}
+
                     <span aria-hidden="true">
                       *
                     </span>
@@ -623,9 +769,13 @@ function ContactPage() {
 
                 </div>
 
-
-                <div className="contact-field">
-
+                <div
+                  className={`contact-field ${
+                    isEmployment
+                      ? 'contact-field-full'
+                      : ''
+                  }`}
+                >
                   <label htmlFor="contact-phone">
                     {page.form.fields.phone}
                   </label>
@@ -648,74 +798,63 @@ function ContactPage() {
 
                 </div>
 
+                {!isEmployment && (
+                  <div className="contact-field">
 
-                <div className="contact-field">
+                    <label htmlFor="contact-service">
+                      {page.form.fields.service}
+                    </label>
 
-                  <label htmlFor="contact-service">
-                    {page.form.fields.service}
-                  </label>
+                    <div className="contact-select-wrapper">
 
-                  <div className="contact-select-wrapper">
-
-                    <select
-                      id="contact-service"
-                      value={formData.service}
-                      onChange={(event) =>
-                        handleChange(
-                          'service',
-                          event.target.value,
-                        )
-                      }
-                    >
-
-                      <option value="">
-                        {
-                          page.form
-                            .placeholders.service
+                      <select
+                        id="contact-service"
+                        value={formData.service}
+                        onChange={(event) =>
+                          handleChange(
+                            'service',
+                            event.target.value,
+                          )
                         }
-                      </option>
+                      >
+                        <option value="">
+                          {
+                            page.form
+                              .placeholders.service
+                          }
+                        </option>
 
-                      {serviceOptions.map(
-                        (service) => (
-                          <option
-                            key={service}
-                            value={service}
-                          >
-                            {service}
-                          </option>
-                        ),
-                      )}
+                        {serviceOptions.map(
+                          (service) => (
+                            <option
+                              key={service}
+                              value={service}
+                            >
+                              {service}
+                            </option>
+                          ),
+                        )}
 
-                    </select>
+                      </select>
 
-                    <svg
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="m7 10 5 5 5-5"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="1.8"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
+                      <i
+                        className="bi bi-chevron-down"
+                        aria-hidden="true"
                       />
-                    </svg>
+
+                    </div>
 
                   </div>
+                )}
 
-                </div>
-
-
-                <div
-                  className="
-                    contact-field
-                    contact-field-full
-                  "
-                >
+                <div className="contact-field contact-field-full">
 
                   <label htmlFor="contact-message">
-                    {page.form.fields.message}
+                    {isEmployment
+                      ? page.form.fields
+                          .employmentMessage
+                      : page.form.fields.message}
+
                     <span aria-hidden="true">
                       *
                     </span>
@@ -732,8 +871,11 @@ function ContactPage() {
                       )
                     }
                     placeholder={
-                      page.form
-                        .placeholders.message
+                      isEmployment
+                        ? page.form.placeholders
+                            .employmentMessage
+                        : page.form.placeholders
+                            .message
                     }
                     required
                   />
@@ -742,23 +884,13 @@ function ContactPage() {
 
               </div>
 
-
               <div className="contact-form-footer">
 
                 <p>
-                  <svg
-                    viewBox="0 0 24 24"
+                  <i
+                    className="bi bi-shield-check"
                     aria-hidden="true"
-                  >
-                    <path
-                      d="M12 3l7 3v5c0 4.6-2.9 8.1-7 10-4.1-1.9-7-5.4-7-10V6l7-3Zm-3 9 2 2 4-4"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.7"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+                  />
 
                   {page.form.privacy}
                 </p>
@@ -768,22 +900,16 @@ function ContactPage() {
                   className="contact-submit"
                 >
                   <span>
-                    {page.form.submit}
+                    {isEmployment
+                      ? page.form
+                          .employmentSubmit
+                      : page.form.submit}
                   </span>
 
-                  <svg
-                    viewBox="0 0 24 24"
+                  <i
+                    className="bi bi-arrow-right"
                     aria-hidden="true"
-                  >
-                    <path
-                      d="M5 12h14M13 6l6 6-6 6"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.8"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+                  />
                 </button>
 
               </div>
@@ -796,28 +922,23 @@ function ContactPage() {
 
       </section>
 
-
-      {/* BENEFITS */}
+      {/* =====================================================
+          BENEFITS
+          ===================================================== */}
       <section className="contact-benefits-section">
 
         <div className="contact-benefits-container">
 
           {benefits.map((benefit) => (
-
             <article
               key={benefit.title}
               className="contact-benefit-card"
             >
-
               <div className="contact-benefit-icon">
-
-                <svg
-                  viewBox="0 0 24 24"
+                <i
+                  className={`bi ${benefit.icon}`}
                   aria-hidden="true"
-                >
-                  {benefit.icon}
-                </svg>
-
+                />
               </div>
 
               <div className="contact-benefit-content">
@@ -831,36 +952,25 @@ function ContactPage() {
                 </p>
 
               </div>
-
             </article>
-
           ))}
 
         </div>
 
       </section>
 
-
-      {/* BOTTOM */}
+      {/* =====================================================
+          BOTTOM
+          ===================================================== */}
       <section className="contact-bottom-section">
 
         <div className="contact-bottom-container">
 
           <div className="contact-bottom-icon">
-
-            <svg
-              viewBox="0 0 24 24"
+            <i
+              className="bi bi-question-lg"
               aria-hidden="true"
-            >
-              <path
-                d="M5 12h14M12 5v14"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.7"
-                strokeLinecap="round"
-              />
-            </svg>
-
+            />
           </div>
 
           <div>

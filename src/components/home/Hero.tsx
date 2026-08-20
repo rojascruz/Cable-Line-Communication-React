@@ -14,6 +14,9 @@ function Hero() {
   return (
     <section className="hero-section">
 
+      {/* ===================================================
+          BACKGROUND
+          =================================================== */}
       <div
         className="hero-glow hero-glow-left"
         aria-hidden="true"
@@ -29,15 +32,23 @@ function Hero() {
         aria-hidden="true"
       />
 
+      {/* ===================================================
+          MAIN CONTENT
+          =================================================== */}
       <div className="hero-container">
 
-        {/* ===================================================
+        {/* =================================================
             CONTENT
-            =================================================== */}
+            ================================================= */}
         <div className="hero-content">
 
           <div className="hero-badge">
-            <span className="hero-badge-dot" />
+            <span className="hero-badge-icon">
+              <i
+                className="bi bi-broadcast-pin"
+                aria-hidden="true"
+              />
+            </span>
 
             <span>
               {hero.badge}
@@ -70,27 +81,24 @@ function Hero() {
                 {hero.primaryButton}
               </span>
 
-              <svg
-                viewBox="0 0 24 24"
+              <i
+                className="bi bi-arrow-right"
                 aria-hidden="true"
-                className="hero-button-icon"
-              >
-                <path
-                  d="M5 12h14M13 6l6 6-6 6"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+              />
             </NavLink>
 
             <NavLink
               to="/services"
               className="hero-button hero-button-secondary"
             >
-              {hero.secondaryButton}
+              <i
+                className="bi bi-grid"
+                aria-hidden="true"
+              />
+
+              <span>
+                {hero.secondaryButton}
+              </span>
             </NavLink>
 
           </div>
@@ -103,30 +111,19 @@ function Hero() {
             <div className="hero-trust-item">
 
               <div className="hero-trust-icon">
-                <svg
-                  viewBox="0 0 24 24"
+                <i
+                  className="bi bi-shield-check"
                   aria-hidden="true"
-                >
-                  <path
-                    d="m9 12 2 2 4-4M12 3l7 3v5c0 4.6-2.9 8.1-7 10-4.1-1.9-7-5.4-7-10V6l7-3Z"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+                />
               </div>
 
-              <div>
+              <div className="hero-trust-copy">
                 <strong>
                   {hero.safeWork}
                 </strong>
 
                 <span>
-                  {
-                    hero.safeWorkDescription
-                  }
+                  {hero.safeWorkDescription}
                 </span>
               </div>
 
@@ -135,40 +132,31 @@ function Hero() {
             <div className="hero-trust-item">
 
               <div className="hero-trust-icon">
-                <svg
-                  viewBox="0 0 24 24"
+                <i
+                  className="bi bi-lightning-charge"
                   aria-hidden="true"
-                >
-                  <path
-                    d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                    strokeLinecap="round"
-                  />
-                </svg>
+                />
               </div>
 
-              <div>
+              <div className="hero-trust-copy">
                 <strong>
                   {hero.modernSolutions}
                 </strong>
 
                 <span>
-                  {
-                    hero.modernSolutionsDescription
-                  }
+                  {hero.modernSolutionsDescription}
                 </span>
               </div>
 
             </div>
 
           </div>
+
         </div>
 
-        {/* ===================================================
-            IMAGE
-            =================================================== */}
+        {/* =================================================
+            VISUAL
+            ================================================= */}
         <div className="hero-visual">
 
           <div className="hero-image-wrapper">
@@ -182,41 +170,24 @@ function Hero() {
               src={heroImage}
               alt="Cable Line Communication telecommunications infrastructure project"
               className="hero-image"
+              fetchPriority="high"
             />
 
-            {/* Top Card */}
+            {/* ===============================================
+                TOP FLOATING CARD
+                =============================================== */}
             <div className="hero-floating-card hero-floating-card-top">
 
               <div className="hero-floating-icon">
-                <svg
-                  viewBox="0 0 24 24"
+                <i
+                  className="bi bi-graph-up-arrow"
                   aria-hidden="true"
-                >
-                  <path
-                    d="M4 17 10 11l4 4 6-7"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-
-                  <path
-                    d="M16 8h4v4"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+                />
               </div>
 
-              <div>
+              <div className="hero-floating-copy">
                 <strong>
-                  {
-                    hero.professionalService
-                  }
+                  {hero.professionalService}
                 </strong>
 
                 <span>
@@ -226,12 +197,19 @@ function Hero() {
 
             </div>
 
-            {/* Bottom Card */}
-            <div className="hero-floating-card hero-floating-card-bottom">
+            {/* ===============================================
+                BOTTOM FLOATING CARD
+                =============================================== */}
+            <NavLink
+              to="/contact"
+              className="hero-floating-card hero-floating-card-bottom"
+            >
+              <span
+                className="hero-status-dot"
+                aria-hidden="true"
+              />
 
-              <span className="hero-status-dot" />
-
-              <div>
+              <div className="hero-floating-copy">
                 <strong>
                   {hero.readyToConnect}
                 </strong>
@@ -241,13 +219,21 @@ function Hero() {
                 </span>
               </div>
 
-            </div>
+              <i
+                className="bi bi-arrow-up-right hero-floating-arrow"
+                aria-hidden="true"
+              />
+            </NavLink>
 
           </div>
+
         </div>
 
       </div>
 
+      {/* ===================================================
+          SCROLL INDICATOR
+          =================================================== */}
       <div
         className="hero-scroll"
         aria-hidden="true"

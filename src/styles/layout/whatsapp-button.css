@@ -1,0 +1,115 @@
+/* =========================================================
+   FLOATING WHATSAPP
+   ========================================================= */
+
+.whatsapp-floating-button {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    z-index: 999;
+
+    width: 56px;
+    height: 56px;
+
+    display: grid;
+
+    place-items: center;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.2);
+
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            145deg,
+            #25d366,
+            #1db954
+        );
+
+    box-shadow:
+        0 14px 36px
+        rgba(15, 85, 43, 0.28);
+
+    text-decoration: none;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        filter 0.25s ease;
+}
+
+.whatsapp-floating-button i {
+    font-size: 1.55rem;
+}
+
+.whatsapp-floating-button:hover {
+    transform:
+        translateY(-4px)
+        scale(1.035);
+
+    box-shadow:
+        0 19px 44px
+        rgba(15, 85, 43, 0.35);
+
+    filter:
+        brightness(1.03);
+}
+
+.whatsapp-floating-button:focus-visible {
+    outline:
+        3px solid
+        rgba(37, 211, 102, 0.34);
+
+    outline-offset: 4px;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+    .whatsapp-floating-button {
+        right: 17px;
+        bottom: 17px;
+
+        width: 52px;
+        height: 52px;
+    }
+
+    .whatsapp-floating-button i {
+        font-size: 1.42rem;
+    }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+    .whatsapp-floating-button {
+        right: 14px;
+        bottom: 14px;
+
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .whatsapp-floating-button {
+        transition: none;
+    }
+}
