@@ -1,5 +1,7 @@
 import { NavLink } from 'react-router-dom'
+
 import { useLanguage } from '../hooks/useLanguage'
+import { siteConfig } from '../config/siteConfig'
 
 import heroImage from '../assets/images/about/CLC-Main.png'
 import aerialImage from '../assets/images/about/CLC-Aerial.png'
@@ -16,18 +18,22 @@ function AboutPage() {
     {
       title: page.values.items.safety.title,
       description: page.values.items.safety.description,
+      icon: 'bi-shield-check',
     },
     {
       title: page.values.items.quality.title,
       description: page.values.items.quality.description,
+      icon: 'bi-patch-check',
     },
     {
       title: page.values.items.commitment.title,
       description: page.values.items.commitment.description,
+      icon: 'bi-people',
     },
     {
       title: page.values.items.reliability.title,
       description: page.values.items.reliability.description,
+      icon: 'bi-award',
     },
   ]
 
@@ -43,9 +49,18 @@ function AboutPage() {
           <img
             src={heroImage}
             alt="Cable Line Communication field operations"
+            fetchPriority="high"
           />
 
-          <div className="about-hero-overlay" />
+          <div
+            className="about-hero-overlay"
+            aria-hidden="true"
+          />
+
+          <div
+            className="about-hero-grid-pattern"
+            aria-hidden="true"
+          />
         </div>
 
         <div className="about-hero-container">
@@ -53,6 +68,11 @@ function AboutPage() {
           <div className="about-hero-content">
 
             <span className="about-hero-eyebrow">
+              <i
+                className="bi bi-buildings"
+                aria-hidden="true"
+              />
+
               {page.hero.eyebrow}
             </span>
 
@@ -69,26 +89,74 @@ function AboutPage() {
               {page.hero.description}
             </p>
 
-            <NavLink
-              to="/contact"
-              className="about-hero-button"
-            >
-              {page.hero.button}
+            <div className="about-hero-actions">
 
-              <svg
-                viewBox="0 0 24 24"
-                aria-hidden="true"
+              <NavLink
+                to={siteConfig.navigation.contact}
+                className="about-hero-button"
               >
-                <path
-                  d="M5 12h14M13 6l6 6-6 6"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
+                <span>
+                  {page.hero.button}
+                </span>
+
+                <i
+                  className="bi bi-arrow-right"
+                  aria-hidden="true"
                 />
-              </svg>
-            </NavLink>
+              </NavLink>
+
+              <NavLink
+                to={siteConfig.navigation.services}
+                className="about-hero-services-link"
+              >
+                <i
+                  className="bi bi-grid"
+                  aria-hidden="true"
+                />
+
+                <span>
+                  {page.hero.servicesButton}
+                </span>
+              </NavLink>
+
+            </div>
+
+            <div className="about-hero-trust">
+
+              <div>
+                <i
+                  className="bi bi-shield-check"
+                  aria-hidden="true"
+                />
+
+                <span>
+                  {page.hero.trustSafety}
+                </span>
+              </div>
+
+              <div>
+                <i
+                  className="bi bi-tools"
+                  aria-hidden="true"
+                />
+
+                <span>
+                  {page.hero.trustEquipment}
+                </span>
+              </div>
+
+              <div>
+                <i
+                  className="bi bi-diagram-3"
+                  aria-hidden="true"
+                />
+
+                <span>
+                  {page.hero.trustInfrastructure}
+                </span>
+              </div>
+
+            </div>
 
           </div>
 
@@ -103,6 +171,9 @@ function AboutPage() {
 
         <div className="about-story-container">
 
+          {/* =================================================
+              IMAGES
+              ================================================= */}
           <div className="about-story-images">
 
             <div className="about-story-image about-story-image-main">
@@ -116,16 +187,43 @@ function AboutPage() {
             <div className="about-story-image about-story-image-secondary">
               <img
                 src={fiberImage}
-                alt="Cable Line Communication fiber optic work"
+                alt="Cable Line Communication fiber optic operations"
                 loading="lazy"
               />
             </div>
 
+            <div className="about-story-badge">
+              <span className="about-story-badge-icon">
+                <i
+                  className="bi bi-gear-wide-connected"
+                  aria-hidden="true"
+                />
+              </span>
+
+              <div>
+                <strong>
+                  {page.story.badgeTitle}
+                </strong>
+
+                <span>
+                  {page.story.badgeDescription}
+                </span>
+              </div>
+            </div>
+
           </div>
 
+          {/* =================================================
+              CONTENT
+              ================================================= */}
           <div className="about-story-content">
 
             <span className="section-eyebrow">
+              <i
+                className="bi bi-building"
+                aria-hidden="true"
+              />
+
               {page.story.eyebrow}
             </span>
 
@@ -148,7 +246,12 @@ function AboutPage() {
 
             <div className="about-story-highlight">
 
-              <span className="about-story-highlight-line" />
+              <span className="about-story-highlight-icon">
+                <i
+                  className="bi bi-quote"
+                  aria-hidden="true"
+                />
+              </span>
 
               <p>
                 {page.story.highlight}
@@ -169,10 +272,17 @@ function AboutPage() {
 
         <div className="about-purpose-container">
 
-          <div className="about-purpose-card">
+          <article className="about-purpose-card">
 
-            <span className="about-purpose-number">
-              
+            <div className="about-purpose-icon">
+              <i
+                className="bi bi-compass"
+                aria-hidden="true"
+              />
+            </div>
+
+            <span className="about-purpose-label">
+              {page.purpose.mission.label}
             </span>
 
             <h2>
@@ -183,12 +293,19 @@ function AboutPage() {
               {page.purpose.mission.description}
             </p>
 
-          </div>
+          </article>
 
-          <div className="about-purpose-card">
+          <article className="about-purpose-card about-purpose-card-accent">
 
-            <span className="about-purpose-number">
-              
+            <div className="about-purpose-icon">
+              <i
+                className="bi bi-eye"
+                aria-hidden="true"
+              />
+            </div>
+
+            <span className="about-purpose-label">
+              {page.purpose.vision.label}
             </span>
 
             <h2>
@@ -199,7 +316,7 @@ function AboutPage() {
               {page.purpose.vision.description}
             </p>
 
-          </div>
+          </article>
 
         </div>
 
@@ -217,6 +334,11 @@ function AboutPage() {
             <div>
 
               <span className="section-eyebrow">
+                <i
+                  className="bi bi-stars"
+                  aria-hidden="true"
+                />
+
                 {page.values.eyebrow}
               </span>
 
@@ -244,7 +366,13 @@ function AboutPage() {
                 key={value.title}
                 className="about-value-card"
               >
-                
+
+                <div className="about-value-icon">
+                  <i
+                    className={`bi ${value.icon}`}
+                    aria-hidden="true"
+                  />
+                </div>
 
                 <h3>
                   {value.title}
@@ -253,6 +381,7 @@ function AboutPage() {
                 <p>
                   {value.description}
                 </p>
+
               </article>
             ))}
 
@@ -269,9 +398,19 @@ function AboutPage() {
 
         <div className="about-cta-container">
 
-          <div>
+          <div
+            className="about-cta-glow"
+            aria-hidden="true"
+          />
+
+          <div className="about-cta-content">
 
             <span className="about-cta-eyebrow">
+              <i
+                className="bi bi-diagram-3"
+                aria-hidden="true"
+              />
+
               {page.cta.eyebrow}
             </span>
 
@@ -286,24 +425,17 @@ function AboutPage() {
           </div>
 
           <NavLink
-            to="/contact"
+            to={siteConfig.navigation.contact}
             className="about-cta-button"
           >
-            {page.cta.button}
+            <span>
+              {page.cta.button}
+            </span>
 
-            <svg
-              viewBox="0 0 24 24"
+            <i
+              className="bi bi-arrow-right"
               aria-hidden="true"
-            >
-              <path
-                d="M5 12h14M13 6l6 6-6 6"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.8"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+            />
           </NavLink>
 
         </div>

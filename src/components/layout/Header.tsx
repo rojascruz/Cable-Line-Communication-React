@@ -4,8 +4,11 @@ import { NavLink } from 'react-router-dom'
 import LanguageSwitcher from './LanguageSwitcher'
 
 import { useLanguage } from '../../hooks/useLanguage'
+import { siteConfig } from '../../config/siteConfig'
 
 import logo from '../../assets/images/logo/CLC-Logo.png'
+
+import '../../styles/layout/header.css'
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] =
@@ -24,36 +27,35 @@ function Header() {
   const navigation = [
     {
       label: t.navigation.home,
-      path: '/',
+      path: siteConfig.navigation.home,
     },
     {
       label: t.navigation.about,
-      path: '/about',
+      path: siteConfig.navigation.about,
     },
     {
       label: t.navigation.services,
-      path: '/services',
+      path: siteConfig.navigation.services,
     },
     {
       label: t.navigation.contact,
-      path: '/contact',
+      path: siteConfig.navigation.contact,
     },
   ]
 
   return (
     <header className="site-header">
+
       <div className="header-container">
 
-        {/* ===================================================
-            LOGO / BRAND
-            =================================================== */}
+        {/* =================================================
+            BRAND
+            ================================================= */}
         <NavLink
-          to="/"
+          to={siteConfig.navigation.home}
           className="header-brand"
           onClick={closeMenu}
-          aria-label={
-            t.accessibility.goHome
-          }
+          aria-label={t.accessibility.goHome}
         >
           <img
             src={logo}
@@ -72,9 +74,9 @@ function Header() {
           </div>
         </NavLink>
 
-        {/* ===================================================
+        {/* =================================================
             NAVIGATION
-            =================================================== */}
+            ================================================= */}
         <nav
           id="main-navigation"
           className={`main-navigation ${
@@ -85,11 +87,15 @@ function Header() {
           }
         >
           <div className="navigation-links">
+
             {navigation.map((item) => (
               <NavLink
                 key={item.path}
                 to={item.path}
-                end={item.path === '/'}
+                end={
+                  item.path ===
+                  siteConfig.navigation.home
+                }
                 onClick={closeMenu}
                 className={({ isActive }) =>
                   `navigation-link ${
@@ -102,89 +108,56 @@ function Header() {
                 {item.label}
               </NavLink>
             ))}
+
           </div>
 
-          {/* =================================================
-              MOBILE ACTIONS
-              ================================================= */}
+          {/* ===============================================
+              MOBILE CTA
+              =============================================== */}
           <div className="mobile-navigation-action">
-            <div className="mobile-language-area">
-              <span className="mobile-language-label">
-                {t.language.label}
-              </span>
-
-              <LanguageSwitcher />
-            </div>
 
             <NavLink
-              to="/contact"
+              to={siteConfig.navigation.contact}
               className="header-contact-button"
               onClick={closeMenu}
             >
               <span>
-                {
-                  t.navigation
-                    .requestService
-                }
+                {t.navigation.requestService}
               </span>
 
-              <svg
-                viewBox="0 0 24 24"
+              <i
+                className="bi bi-arrow-right"
                 aria-hidden="true"
-                className="button-icon"
-              >
-                <path
-                  d="M5 12h14M13 6l6 6-6 6"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+              />
             </NavLink>
+
           </div>
+
         </nav>
 
-        {/* ===================================================
-            HEADER ACTIONS
-            =================================================== */}
+        {/* =================================================
+            ACTIONS
+            ================================================= */}
         <div className="header-actions">
 
-          {/* Visible language selector */}
           <div className="desktop-language-switcher">
             <LanguageSwitcher />
           </div>
 
-          {/* Desktop CTA */}
           <NavLink
-            to="/contact"
+            to={siteConfig.navigation.contact}
             className="header-contact-button"
           >
             <span>
-              {
-                t.navigation
-                  .requestService
-              }
+              {t.navigation.requestService}
             </span>
 
-            <svg
-              viewBox="0 0 24 24"
+            <i
+              className="bi bi-arrow-right"
               aria-hidden="true"
-              className="button-icon"
-            >
-              <path
-                d="M5 12h14M13 6l6 6-6 6"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+            />
           </NavLink>
 
-          {/* Mobile Menu Button */}
           <button
             type="button"
             className={`mobile-menu-button ${
@@ -207,11 +180,12 @@ function Header() {
           </button>
 
         </div>
+
       </div>
 
-      {/* =====================================================
+      {/* ===================================================
           BACKDROP
-          ===================================================== */}
+          =================================================== */}
       <button
         type="button"
         className={`navigation-backdrop ${
@@ -227,6 +201,7 @@ function Header() {
           isMenuOpen ? 0 : -1
         }
       />
+
     </header>
   )
 }

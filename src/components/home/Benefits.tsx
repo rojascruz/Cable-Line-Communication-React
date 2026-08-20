@@ -11,86 +11,64 @@ function Benefits() {
     {
       title: benefits.items.experience.title,
       description: benefits.items.experience.description,
-      icon: (
-        <path
-          d="M12 3l2.3 4.7 5.2.8-3.8 3.7.9 5.2-4.6-2.4-4.6 2.4.9-5.2L4.5 8.5l5.2-.8L12 3Z"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.7"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      ),
+      icon: 'bi-award',
     },
     {
       title: benefits.items.safety.title,
       description: benefits.items.safety.description,
-      icon: (
-        <path
-          d="M12 3l7 3v5c0 4.6-2.9 8.1-7 10-4.1-1.9-7-5.4-7-10V6l7-3Zm-3 9 2 2 4-4"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.7"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      ),
+      icon: 'bi-shield-check',
     },
     {
       title: benefits.items.quality.title,
       description: benefits.items.quality.description,
-      icon: (
-        <>
-          <circle
-            cx="12"
-            cy="12"
-            r="8"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.7"
-          />
-
-          <path
-            d="m8.5 12 2.2 2.2 4.8-5"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.7"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </>
-      ),
+      icon: 'bi-patch-check',
     },
     {
       title: benefits.items.commitment.title,
       description: benefits.items.commitment.description,
-      icon: (
-        <path
-          d="M7 11V7a5 5 0 0 1 10 0v4M5 11h14v9H5v-9Zm7 3v3"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.7"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      ),
+      icon: 'bi-people',
     },
   ]
 
   return (
     <section className="benefits-section">
+
+      {/* ===================================================
+          BACKGROUND
+          =================================================== */}
       <div
-        className="benefits-background-glow"
+        className="benefits-background-glow benefits-background-glow-primary"
         aria-hidden="true"
       />
 
+      <div
+        className="benefits-background-glow benefits-background-glow-secondary"
+        aria-hidden="true"
+      />
+
+      <div
+        className="benefits-grid-pattern"
+        aria-hidden="true"
+      />
+
+      {/* ===================================================
+          CONTAINER
+          =================================================== */}
       <div className="benefits-container">
 
+        {/* =================================================
+            HEADER
+            ================================================= */}
         <div className="benefits-heading">
 
           <div className="benefits-heading-copy">
 
-            <span className="section-eyebrow">
+            <span className="section-eyebrow benefits-eyebrow">
+              <i
+                className="bi bi-stars"
+                aria-hidden="true"
+              />
+
               {benefits.eyebrow}
             </span>
 
@@ -111,35 +89,36 @@ function Benefits() {
 
         </div>
 
+        {/* =================================================
+            BENEFITS
+            ================================================= */}
         <div className="benefits-grid">
           {items.map((item) => (
             <article
               key={item.title}
               className="benefit-card"
             >
-              <div className="benefit-card-top">
-
-                <div className="benefit-icon">
-                  <svg
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                  >
-                    {item.icon}
-                  </svg>
-                </div>
-
-               
-
+              <div className="benefit-icon">
+                <i
+                  className={`bi ${item.icon}`}
+                  aria-hidden="true"
+                />
               </div>
 
-              <h3>
-                {item.title}
-              </h3>
+              <div className="benefit-card-copy">
+                <h3>
+                  {item.title}
+                </h3>
 
-              <p>
-                {item.description}
-              </p>
+                <p>
+                  {item.description}
+                </p>
+              </div>
 
+              <div
+                className="benefit-card-accent"
+                aria-hidden="true"
+              />
             </article>
           ))}
         </div>

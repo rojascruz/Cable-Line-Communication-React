@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from 'react'
 
 import { useLanguage } from '../../hooks/useLanguage'
 
+import '../../styles/layout/language-switcher.css'
+
 function LanguageSwitcher() {
   const {
     language,
@@ -9,7 +11,8 @@ function LanguageSwitcher() {
     t,
   } = useLanguage()
 
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] =
+    useState(false)
 
   const switcherRef =
     useRef<HTMLDivElement>(null)
@@ -71,6 +74,7 @@ function LanguageSwitcher() {
       className="language-switcher"
       ref={switcherRef}
     >
+
       <button
         type="button"
         className={`language-trigger ${
@@ -87,54 +91,30 @@ function LanguageSwitcher() {
             : t.language.spanish
         }`}
       >
-        <svg
-          className="language-globe"
-          viewBox="0 0 24 24"
+        <i
+          className="bi bi-globe2 language-globe"
           aria-hidden="true"
-        >
-          <circle
-            cx="12"
-            cy="12"
-            r="9"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.8"
-          />
-
-          <path
-            d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.5"
-          />
-        </svg>
+        />
 
         <span className="language-code">
           {language.toUpperCase()}
         </span>
 
-        <svg
-          className="language-chevron"
-          viewBox="0 0 24 24"
+        <i
+          className="bi bi-chevron-down language-chevron"
           aria-hidden="true"
-        >
-          <path
-            d="m7 9 5 5 5-5"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
+        />
       </button>
 
       <div
         className={`language-dropdown ${
-          isOpen ? 'is-visible' : ''
+          isOpen
+            ? 'is-visible'
+            : ''
         }`}
         role="menu"
       >
+
         <div className="language-dropdown-header">
           {t.language.label}
         </div>
@@ -156,25 +136,20 @@ function LanguageSwitcher() {
           </span>
 
           <span className="language-option-content">
-            <strong>English</strong>
-            <small>English</small>
+            <strong>
+              English
+            </strong>
+
+            <small>
+              English
+            </small>
           </span>
 
           {language === 'en' && (
-            <svg
-              className="language-check"
-              viewBox="0 0 24 24"
+            <i
+              className="bi bi-check-lg language-check"
               aria-hidden="true"
-            >
-              <path
-                d="m5 12 4 4L19 6"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+            />
           )}
         </button>
 
@@ -195,28 +170,25 @@ function LanguageSwitcher() {
           </span>
 
           <span className="language-option-content">
-            <strong>Español</strong>
-            <small>Spanish</small>
+            <strong>
+              Español
+            </strong>
+
+            <small>
+              Spanish
+            </small>
           </span>
 
           {language === 'es' && (
-            <svg
-              className="language-check"
-              viewBox="0 0 24 24"
+            <i
+              className="bi bi-check-lg language-check"
               aria-hidden="true"
-            >
-              <path
-                d="m5 12 4 4L19 6"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+            />
           )}
         </button>
+
       </div>
+
     </div>
   )
 }

@@ -1,81 +1,133 @@
 import { NavLink } from 'react-router-dom'
+
 import { useLanguage } from '../hooks/useLanguage'
+import { siteConfig } from '../config/siteConfig'
 
 import '../styles/pages/not-found.css'
 
 function NotFoundPage() {
-  const { language } = useLanguage()
+  const { t } = useLanguage()
 
-  const content =
-    language === 'es'
-      ? {
-          eyebrow: 'Página no encontrada',
-          title: 'Parece que esta conexión',
-          highlight: 'no está disponible.',
-          description:
-            'La página que estás buscando no existe o fue movida. Puedes regresar al inicio y continuar navegando.',
-          button: 'Volver al Inicio',
-        }
-      : {
-          eyebrow: 'Page Not Found',
-          title: 'Looks like this connection',
-          highlight: 'is unavailable.',
-          description:
-            'The page you are looking for does not exist or may have been moved. Return home to continue browsing.',
-          button: 'Back to Home',
-        }
+  const page = t.notFoundPage
 
   return (
     <main className="not-found-page">
 
-      <div className="not-found-glow not-found-glow-one" />
-      <div className="not-found-glow not-found-glow-two" />
+      {/* =====================================================
+          BACKGROUND
+          ===================================================== */}
+      <div
+        className="not-found-glow not-found-glow-one"
+        aria-hidden="true"
+      />
 
+      <div
+        className="not-found-glow not-found-glow-two"
+        aria-hidden="true"
+      />
+
+      <div
+        className="not-found-grid"
+        aria-hidden="true"
+      />
+
+      {/* =====================================================
+          CONTENT
+          ===================================================== */}
       <div className="not-found-container">
 
-        <div className="not-found-code">
+        <div
+          className="not-found-code"
+          aria-hidden="true"
+        >
           404
         </div>
 
+        <div className="not-found-icon">
+          <i
+            className="bi bi-router"
+            aria-hidden="true"
+          />
+        </div>
+
         <span className="not-found-eyebrow">
-          {content.eyebrow}
+          <i
+            className="bi bi-exclamation-circle"
+            aria-hidden="true"
+          />
+
+          {page.eyebrow}
         </span>
 
         <h1 className="not-found-title">
-          {content.title}
+          {page.title}
 
           <span>
             {' '}
-            {content.highlight}
+            {page.titleHighlight}
           </span>
         </h1>
 
         <p className="not-found-description">
-          {content.description}
+          {page.description}
         </p>
 
-        <NavLink
-          to="/"
-          className="not-found-button"
-        >
+        {/* ===================================================
+            ACTIONS
+            =================================================== */}
+        <div className="not-found-actions">
+
+          <NavLink
+            to={siteConfig.navigation.home}
+            className="not-found-primary-button"
+          >
+            <i
+              className="bi bi-arrow-left"
+              aria-hidden="true"
+            />
+
+            <span>
+              {page.primaryButton}
+            </span>
+          </NavLink>
+
+          <NavLink
+            to={siteConfig.navigation.services}
+            className="not-found-secondary-button"
+          >
+            <i
+              className="bi bi-grid"
+              aria-hidden="true"
+            />
+
+            <span>
+              {page.secondaryButton}
+            </span>
+          </NavLink>
+
+        </div>
+
+        {/* ===================================================
+            SUPPORT
+            =================================================== */}
+        <div className="not-found-help">
+
+          <i
+            className="bi bi-headset"
+            aria-hidden="true"
+          />
+
           <span>
-            {content.button}
+            {page.helpText}
           </span>
 
-          <svg
-            viewBox="0 0 24 24"
-            aria-hidden="true"
+          <NavLink
+            to={siteConfig.navigation.contact}
           >
-            <path
-              d="M19 12H5M11 18l-6-6 6-6"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </NavLink>
+            {page.contactLink}
+          </NavLink>
+
+        </div>
 
       </div>
 

@@ -6,19 +6,62 @@
     position: relative;
 
     padding:
-        clamp(80px, 8vw, 120px)
+        clamp(82px, 8vw, 122px)
         0;
 
     overflow: hidden;
 
+    isolation: isolate;
+
     background:
         linear-gradient(
-            135deg,
-            #0b1f3a 0%,
-            #102b52 50%,
-            #123863 100%
+            180deg,
+            #f3f8fd 0%,
+            #f8fbff 100%
         );
 }
+
+/* =========================================================
+   BACKGROUND
+   ========================================================= */
+
+.home-cta-background-glow {
+    position: absolute;
+
+    z-index: -2;
+
+    border-radius: 50%;
+
+    filter: blur(130px);
+
+    pointer-events: none;
+}
+
+.home-cta-background-glow-one {
+    top: -220px;
+    left: -160px;
+
+    width: 520px;
+    height: 520px;
+
+    background:
+        rgba(37, 99, 235, 0.09);
+}
+
+.home-cta-background-glow-two {
+    right: -180px;
+    bottom: -220px;
+
+    width: 540px;
+    height: 540px;
+
+    background:
+        rgba(49, 200, 255, 0.08);
+}
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
 
 .home-cta-container {
     position: relative;
@@ -29,12 +72,12 @@
             1280px
         );
 
-    min-height: 430px;
+    min-height: 440px;
 
     margin-inline: auto;
 
     padding:
-        clamp(45px, 7vw, 80px);
+        clamp(48px, 7vw, 82px);
 
     display: flex;
     align-items: center;
@@ -45,18 +88,45 @@
         1px solid
         rgba(255, 255, 255, 0.08);
 
-    border-radius: 32px;
+    border-radius: 30px;
 
     background:
         linear-gradient(
-            145deg,
-            rgba(255, 255, 255, 0.06),
-            rgba(255, 255, 255, 0.025)
+            135deg,
+            #07192d 0%,
+            #0a2341 48%,
+            #0d3158 100%
         );
 
     box-shadow:
         0 30px 80px
-        rgba(0, 0, 0, 0.18);
+        rgba(14, 45, 75, 0.18);
+}
+
+/* =========================================================
+   INNER LIGHT
+   ========================================================= */
+
+.home-cta-container::before {
+    content: '';
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(56, 132, 255, 0.12),
+            transparent 36%
+        ),
+        radial-gradient(
+            circle at 86% 70%,
+            rgba(49, 200, 255, 0.09),
+            transparent 34%
+        );
 }
 
 /* =========================================================
@@ -65,41 +135,63 @@
 
 .home-cta-content {
     position: relative;
-    z-index: 2;
 
-    max-width: 710px;
+    z-index: 3;
+
+    width: 100%;
+
+    max-width: 720px;
 }
 
-.home-cta-eyebrow {
-    display: inline-flex;
+/* =========================================================
+   EYEBROW
+   ========================================================= */
 
-    margin-bottom: 20px;
+.home-cta-eyebrow {
+    width: fit-content;
+
+    min-height: 36px;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 19px;
 
     padding:
-        9px
-        14px;
+        0
+        13px;
 
     border:
         1px solid
-        rgba(49, 200, 255, 0.15);
+        rgba(49, 200, 255, 0.14);
 
     border-radius: 999px;
 
-    color: #31c8ff;
+    color: #57d4ff;
 
     background:
-        rgba(49, 200, 255, 0.07);
+        rgba(49, 200, 255, 0.06);
 
-    font-size: 0.72rem;
-    font-weight: 800;
+    font-size: 0.68rem;
+    font-weight: 850;
 
-    letter-spacing: 0.08em;
+    letter-spacing: 0.09em;
 
     text-transform: uppercase;
 }
 
+.home-cta-eyebrow i {
+    font-size: 0.76rem;
+}
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
 .home-cta-title {
-    max-width: 720px;
+    max-width: 760px;
 
     margin: 0;
 
@@ -108,15 +200,15 @@
     font-size:
         clamp(
             2.7rem,
-            5vw,
-            5.2rem
+            4.8vw,
+            4.9rem
         );
 
     font-weight: 850;
 
-    line-height: 0.98;
+    line-height: 1;
 
-    letter-spacing: -0.05em;
+    letter-spacing: -0.048em;
 
     text-wrap: balance;
 }
@@ -125,19 +217,26 @@
     background:
         linear-gradient(
             120deg,
-            #4b8dff,
-            #31c8ff
+            #5594ff 0%,
+            #36caff 100%
         );
 
     background-clip: text;
+
     -webkit-background-clip: text;
 
     color: transparent;
-    -webkit-text-fill-color: transparent;
+
+    -webkit-text-fill-color:
+        transparent;
 }
 
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
 .home-cta-description {
-    max-width: 620px;
+    max-width: 610px;
 
     margin:
         24px
@@ -145,9 +244,9 @@
         0;
 
     color:
-        rgba(226, 239, 252, 0.65);
+        rgba(226, 239, 252, 0.64);
 
-    font-size: 1rem;
+    font-size: 0.96rem;
 
     line-height: 1.75;
 }
@@ -162,14 +261,14 @@
 
     flex-wrap: wrap;
 
-    gap: 14px;
+    gap: 12px;
 
     margin-top: 32px;
 }
 
 .home-cta-primary,
 .home-cta-secondary {
-    min-height: 50px;
+    min-height: 52px;
 
     display: inline-flex;
     align-items: center;
@@ -181,19 +280,35 @@
         0
         21px;
 
-    border-radius: 14px;
+    border:
+        1px solid
+        transparent;
 
-    font-size: 0.82rem;
-    font-weight: 800;
+    border-radius: 13px;
+
+    font-size: 0.8rem;
+    font-weight: 850;
 
     text-decoration: none;
 
     transition:
         transform 0.25s ease,
         box-shadow 0.25s ease,
-        background-color 0.25s ease,
+        background 0.25s ease,
         border-color 0.25s ease;
 }
+
+.home-cta-primary i,
+.home-cta-secondary i {
+    font-size: 0.86rem;
+
+    transition:
+        transform 0.25s ease;
+}
+
+/* =========================================================
+   PRIMARY
+   ========================================================= */
 
 .home-cta-primary {
     color: #071426;
@@ -201,42 +316,102 @@
     background: #ffffff;
 
     box-shadow:
-        0 14px 35px
-        rgba(0, 0, 0, 0.15);
-}
-
-.home-cta-primary svg {
-    width: 18px;
-    height: 18px;
+        0 14px 34px
+        rgba(0, 0, 0, 0.16);
 }
 
 .home-cta-primary:hover {
-    transform: translateY(-2px);
+    transform:
+        translateY(-2px);
 
     box-shadow:
         0 18px 42px
-        rgba(0, 0, 0, 0.2);
+        rgba(0, 0, 0, 0.22);
 }
+
+.home-cta-primary:hover i {
+    transform:
+        translateX(4px);
+}
+
+/* =========================================================
+   SECONDARY
+   ========================================================= */
 
 .home-cta-secondary {
     color: #ffffff;
 
-    border:
-        1px solid
+    border-color:
         rgba(255, 255, 255, 0.14);
 
     background:
-        rgba(255, 255, 255, 0.04);
+        rgba(255, 255, 255, 0.045);
 }
 
 .home-cta-secondary:hover {
-    transform: translateY(-2px);
+    transform:
+        translateY(-2px);
 
     border-color:
-        rgba(49, 200, 255, 0.32);
+        rgba(49, 200, 255, 0.28);
 
     background:
-        rgba(49, 200, 255, 0.08);
+        rgba(49, 200, 255, 0.075);
+}
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.home-cta-primary:focus-visible,
+.home-cta-secondary:focus-visible {
+    outline:
+        3px solid
+        rgba(49, 200, 255, 0.3);
+
+    outline-offset: 4px;
+}
+
+/* =========================================================
+   TRUST
+   ========================================================= */
+
+.home-cta-trust {
+    margin-top: 35px;
+
+    padding-top: 24px;
+
+    display: flex;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap:
+        14px
+        24px;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+}
+
+.home-cta-trust-item {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color:
+        rgba(225, 238, 251, 0.62);
+
+    font-size: 0.68rem;
+    font-weight: 700;
+}
+
+.home-cta-trust-item i {
+    color: #4bd2ff;
+
+    font-size: 0.82rem;
 }
 
 /* =========================================================
@@ -249,56 +424,176 @@
     top: 0;
     right: 0;
 
-    width: 45%;
+    z-index: 1;
+
+    width: 47%;
     height: 100%;
 
     pointer-events: none;
 }
 
-.home-cta-circle {
+/* =========================================================
+   RINGS
+   ========================================================= */
+
+.home-cta-decoration-ring {
     position: absolute;
 
     border-radius: 50%;
 
-    filter: blur(4px);
+    border:
+        1px solid
+        rgba(72, 190, 255, 0.1);
 }
 
-.home-cta-circle-one {
-    top: -110px;
-    right: -80px;
+.home-cta-decoration-ring-one {
+    top: -95px;
+    right: -70px;
 
-    width: 330px;
-    height: 330px;
-
-    background:
-        rgba(37, 99, 235, 0.14);
+    width: 340px;
+    height: 340px;
 }
 
-.home-cta-circle-two {
-    right: 140px;
-    bottom: -130px;
+.home-cta-decoration-ring-two {
+    right: 95px;
+    bottom: -145px;
 
-    width: 280px;
-    height: 280px;
-
-    background:
-        rgba(49, 200, 255, 0.08);
+    width: 300px;
+    height: 300px;
 }
+
+/* =========================================================
+   NETWORK
+   ========================================================= */
 
 .home-cta-network {
     position: absolute;
 
-    top: 45px;
-    right: 10px;
+    top: 50%;
 
-    width: 390px;
+    right: 7%;
 
-    color:
-        rgba(49, 200, 255, 0.22);
+    width: 360px;
+    height: 260px;
+
+    transform:
+        translateY(-50%);
 }
 
-.home-cta-network circle {
-    fill: #31c8ff;
+/* =========================================================
+   NETWORK LINES
+   ========================================================= */
+
+.home-cta-network-line {
+    position: absolute;
+
+    height: 1px;
+
+    transform-origin: left center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(49, 200, 255, 0.08),
+            rgba(49, 200, 255, 0.35),
+            rgba(49, 200, 255, 0.08)
+        );
+}
+
+.home-cta-network-line-one {
+    width: 250px;
+
+    top: 150px;
+    left: 50px;
+
+    transform:
+        rotate(-25deg);
+}
+
+.home-cta-network-line-two {
+    width: 210px;
+
+    top: 105px;
+    left: 110px;
+
+    transform:
+        rotate(24deg);
+}
+
+/* =========================================================
+   NETWORK NODES
+   ========================================================= */
+
+.home-cta-network-node {
+    position: absolute;
+
+    width: 56px;
+    height: 56px;
+
+    display: grid;
+
+    place-items: center;
+
+    border:
+        1px solid
+        rgba(49, 200, 255, 0.16);
+
+    border-radius: 17px;
+
+    color: #5bd7ff;
+
+    background:
+        rgba(7, 28, 51, 0.74);
+
+    box-shadow:
+        0 18px 36px
+        rgba(0, 0, 0, 0.14);
+
+    backdrop-filter:
+        blur(12px);
+
+    -webkit-backdrop-filter:
+        blur(12px);
+}
+
+.home-cta-network-node i {
+    font-size: 1.15rem;
+}
+
+.home-cta-network-node-one {
+    left: 28px;
+    bottom: 18px;
+}
+
+.home-cta-network-node-two {
+    top: 30px;
+    left: 145px;
+}
+
+.home-cta-network-node-three {
+    right: 10px;
+    bottom: 50px;
+}
+
+/* =========================================================
+   LAPTOP
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .home-cta-container {
+        min-height: 420px;
+    }
+
+    .home-cta-decoration {
+        width: 44%;
+
+        opacity: 0.7;
+    }
+
+    .home-cta-network {
+        right: -4%;
+    }
 }
 
 /* =========================================================
@@ -314,12 +609,25 @@
                 760px
             );
 
-        min-height: 400px;
+        min-height: 420px;
+
+        padding:
+            58px
+            48px;
+    }
+
+    .home-cta-content {
+        max-width: 620px;
     }
 
     .home-cta-decoration {
         width: 55%;
-        opacity: 0.55;
+
+        opacity: 0.34;
+    }
+
+    .home-cta-title {
+        max-width: 620px;
     }
 }
 
@@ -337,32 +645,129 @@
 
     .home-cta-container {
         width:
-            calc(100% - 30px);
+            calc(
+                100% - 30px
+            );
 
         min-height: auto;
 
         padding:
-            42px
-            24px;
+            44px
+            23px;
 
-        border-radius: 24px;
+        border-radius: 23px;
     }
 
-    .home-cta-decoration {
-        width: 100%;
-
-        opacity: 0.28;
+    .home-cta-content {
+        text-align: left;
     }
+
+    .home-cta-eyebrow {
+        margin-bottom: 17px;
+
+        font-size: 0.64rem;
+    }
+
+    .home-cta-title {
+        font-size:
+            clamp(
+                2.2rem,
+                10vw,
+                3rem
+            );
+
+        line-height: 1.03;
+    }
+
+    .home-cta-description {
+        margin-top: 20px;
+
+        font-size: 0.88rem;
+
+        line-height: 1.7;
+    }
+
+    /* =====================================================
+       ACTIONS
+       ===================================================== */
 
     .home-cta-actions {
+        width: 100%;
+
+        margin-top: 28px;
+
         flex-direction: column;
 
         align-items: stretch;
+
+        gap: 10px;
     }
 
     .home-cta-primary,
     .home-cta-secondary {
         width: 100%;
+
+        min-height: 51px;
+    }
+
+    /* =====================================================
+       TRUST
+       ===================================================== */
+
+    .home-cta-trust {
+        margin-top: 30px;
+
+        padding-top: 21px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 11px;
+    }
+
+    /* =====================================================
+       DECORATION
+       ===================================================== */
+
+    .home-cta-decoration {
+        width: 100%;
+
+        opacity: 0.18;
+    }
+
+    .home-cta-network {
+        top: auto;
+        right: -100px;
+        bottom: -30px;
+
+        transform: none;
+    }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+    .home-cta-container {
+        width:
+            calc(
+                100% - 24px
+            );
+
+        padding:
+            40px
+            19px;
+    }
+
+    .home-cta-title {
+        font-size: 2.2rem;
+    }
+
+    .home-cta-trust-item {
+        font-size: 0.64rem;
     }
 }
 
@@ -373,7 +778,9 @@
 @media (prefers-reduced-motion: reduce) {
 
     .home-cta-primary,
-    .home-cta-secondary {
+    .home-cta-secondary,
+    .home-cta-primary i,
+    .home-cta-secondary i {
         transition: none;
     }
 }

@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+
 import { useLanguage } from '../../hooks/useLanguage'
 
 import '../../styles/home/home-cta.css'
@@ -10,11 +11,33 @@ function HomeCta() {
 
   return (
     <section className="home-cta-section">
+
+      {/* ===================================================
+          BACKGROUND
+          =================================================== */}
+      <div
+        className="home-cta-background-glow home-cta-background-glow-one"
+        aria-hidden="true"
+      />
+
+      <div
+        className="home-cta-background-glow home-cta-background-glow-two"
+        aria-hidden="true"
+      />
+
       <div className="home-cta-container">
 
+        {/* =================================================
+            CONTENT
+            ================================================= */}
         <div className="home-cta-content">
 
           <span className="home-cta-eyebrow">
+            <i
+              className="bi bi-diagram-3"
+              aria-hidden="true"
+            />
+
             {cta.eyebrow}
           </span>
 
@@ -31,7 +54,11 @@ function HomeCta() {
             {cta.description}
           </p>
 
+          {/* =================================================
+              ACTIONS
+              ================================================= */}
           <div className="home-cta-actions">
+
             <NavLink
               to="/contact"
               className="home-cta-primary"
@@ -40,57 +67,104 @@ function HomeCta() {
                 {cta.primaryButton}
               </span>
 
-              <svg
-                viewBox="0 0 24 24"
+              <i
+                className="bi bi-arrow-right"
                 aria-hidden="true"
-              >
-                <path
-                  d="M5 12h14M13 6l6 6-6 6"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+              />
             </NavLink>
 
             <NavLink
               to="/services"
               className="home-cta-secondary"
             >
-              {cta.secondaryButton}
+              <i
+                className="bi bi-grid"
+                aria-hidden="true"
+              />
+
+              <span>
+                {cta.secondaryButton}
+              </span>
             </NavLink>
+
+          </div>
+
+          {/* =================================================
+              TRUST
+              ================================================= */}
+          <div className="home-cta-trust">
+
+            <div className="home-cta-trust-item">
+              <i
+                className="bi bi-shield-check"
+                aria-hidden="true"
+              />
+
+              <span>
+                {cta.trustSafety}
+              </span>
+            </div>
+
+            <div className="home-cta-trust-item">
+              <i
+                className="bi bi-tools"
+                aria-hidden="true"
+              />
+
+              <span>
+                {cta.trustEquipment}
+              </span>
+            </div>
+
+            <div className="home-cta-trust-item">
+              <i
+                className="bi bi-person-check"
+                aria-hidden="true"
+              />
+
+              <span>
+                {cta.trustProfessional}
+              </span>
+            </div>
+
           </div>
 
         </div>
 
+        {/* =================================================
+            DECORATION
+            ================================================= */}
         <div
           className="home-cta-decoration"
           aria-hidden="true"
         >
-          <div className="home-cta-circle home-cta-circle-one" />
-          <div className="home-cta-circle home-cta-circle-two" />
+          <div className="home-cta-decoration-ring home-cta-decoration-ring-one" />
 
-          <svg
-            className="home-cta-network"
-            viewBox="0 0 400 300"
-          >
-            <path
-              d="M25 205C85 140 130 225 190 160C250 95 300 165 375 75"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeDasharray="6 9"
-            />
+          <div className="home-cta-decoration-ring home-cta-decoration-ring-two" />
 
-            <circle cx="25" cy="205" r="6" />
-            <circle cx="190" cy="160" r="6" />
-            <circle cx="375" cy="75" r="6" />
-          </svg>
+          <div className="home-cta-network">
+
+            <div className="home-cta-network-line home-cta-network-line-one" />
+
+            <div className="home-cta-network-line home-cta-network-line-two" />
+
+            <span className="home-cta-network-node home-cta-network-node-one">
+              <i className="bi bi-router" />
+            </span>
+
+            <span className="home-cta-network-node home-cta-network-node-two">
+              <i className="bi bi-broadcast" />
+            </span>
+
+            <span className="home-cta-network-node home-cta-network-node-three">
+              <i className="bi bi-diagram-3" />
+            </span>
+
+          </div>
         </div>
 
       </div>
+
     </section>
   )
 }
